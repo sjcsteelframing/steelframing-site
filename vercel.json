@@ -8,12 +8,16 @@
   "rewrites": [
     { "source": "/", "destination": "/content/index.html" },
     { "source": "/steel-framing/o-que-e-light-steel-framing", "destination": "/content/o-que-e-steel-framing/index.html" },
+    { "source": "/steel-framing/o-que-e-light-steel-framing/", "destination": "/content/o-que-e-steel-framing/index.html" },
     { "source": "/steel-framing/o-que-e-light-steel-framing/:path*", "destination": "/content/o-que-e-steel-framing/:path*" },
     { "source": "/steel-framing-x-alvenaria", "destination": "/content/steelframing-vs-alvenaria/index.html" },
+    { "source": "/steel-framing-x-alvenaria/", "destination": "/content/steelframing-vs-alvenaria/index.html" },
     { "source": "/steel-framing-x-alvenaria/:path*", "destination": "/content/steelframing-vs-alvenaria/:path*" },
     { "source": "/mercado-de-investimento/airbnb-e-aluguel", "destination": "/content/mercado-de-investimento/airbnb/index.html" },
+    { "source": "/mercado-de-investimento/airbnb-e-aluguel/", "destination": "/content/mercado-de-investimento/airbnb/index.html" },
     { "source": "/mercado-de-investimento/airbnb-e-aluguel/:path*", "destination": "/content/mercado-de-investimento/airbnb/:path*" },
     { "source": "/sobre", "destination": "/content/sobre/index.html" },
+    { "source": "/sobre/", "destination": "/content/sobre/index.html" },
     { "source": "/sobre/:path*", "destination": "/content/sobre/:path*" }
   ]
 }
