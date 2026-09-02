@@ -1,0 +1,8 @@
+PACOTE CURTO PARA WINDOWS
+
+Abra: index.html
+
+Os nomes de pastas e arquivos foram encurtados para evitar o erro
+0x80010135 ("Caminho muito longo") durante a extração no Windows.
+
+Este pacote é apenas para revisão visual local do núcleo Airbnb.

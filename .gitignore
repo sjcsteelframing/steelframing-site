@@ -1,0 +1,8 @@
+content.zip
+Instagram/
+legacy/
+servidor_local.py
+.DS_Store
+Thumbs.db
+*.log
+node_modules/

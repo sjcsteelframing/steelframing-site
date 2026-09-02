@@ -1,0 +1,21 @@
+<svg width="900" height="600" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="600" fill="#FAFAF8"/>
+
+  <!-- Monogram built from straight beams, 90/45 angles -->
+  <g transform="translate(300,140)">
+    <!-- S built as stacked offset rectangles (beam-like) -->
+    <rect x="0" y="0" width="140" height="26" fill="#2E5A8F"/>
+    <rect x="0" y="0" width="26" height="140" fill="#2E5A8F"/>
+    <rect x="0" y="114" width="140" height="26" fill="#2E5A8F"/>
+    <rect x="114" y="114" width="26" height="140" fill="#0B0F10"/>
+    <rect x="0" y="228" width="140" height="26" fill="#2E5A8F"/>
+
+    <!-- F built from beams, offset to the right -->
+    <rect x="200" y="0" width="26" height="254" fill="#2E5A8F"/>
+    <rect x="200" y="0" width="140" height="26" fill="#2E5A8F"/>
+    <rect x="200" y="110" width="120" height="26" fill="#0B0F10"/>
+  </g>
+
+  <text x="450" y="470" font-family="Poppins" font-weight="300" font-size="34" letter-spacing="10" fill="#2E5A8F" text-anchor="middle">STEEL FRAMING</text>
+  <line x1="330" y1="500" x2="570" y2="500" stroke="#0B0F10" stroke-width="2"/>
+</svg>
