@@ -70,7 +70,7 @@ p{margin:0 0 1rem}
 .menu-toggle span:not(.sr-only){display:block;width:25px;height:2px;background:var(--navy);margin:5px 0}
 
 .hero{
-  min-height:min(78vh,950px);
+  min-height:950px;
   position:relative;
   display:grid;
   align-items:end;
