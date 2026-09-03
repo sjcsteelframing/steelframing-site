@@ -198,7 +198,7 @@ td{color:var(--muted);font-size:14px}
   .container-site,.content-narrow,.section-grid{width:calc(100% - 32px)}
   .brand span{display:none}
   .page-hero{min-height:950px}.page-hero.compact{min-height:420px}
-  .hero-overlay{background:linear-gradient(0deg,rgba(7,21,34,.95) 0%,rgba(7,21,34,.55) 48%,rgba(7,21,34,.12) 82%)}
+  .hero-overlay{background:linear-gradient(115deg,rgba(7,21,34,.92) 0%,rgba(7,21,34,.60) 52%,rgba(7,21,34,.18) 100%)}
   .hero-inner{align-self:end;padding:180px 0 38px;width:calc(100% - 32px)}
   .page-hero h1,.page-hero.compact h1{font-size:40px}
   .section{padding:54px 0}
