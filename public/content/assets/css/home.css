@@ -70,7 +70,7 @@ p{margin:0 0 1rem}
 .menu-toggle span:not(.sr-only){display:block;width:25px;height:2px;background:var(--navy);margin:5px 0}
 
 .hero{
-  min-height:min(78vh,760px);
+  min-height:min(78vh,950px);
   position:relative;
   display:grid;
   align-items:end;
@@ -206,7 +206,7 @@ p{margin:0 0 1rem}
   .container,.narrow{width:min(calc(100% - 28px),var(--max))}
   .header-inner{min-height:70px}
   .main-nav{top:70px}
-  .hero{min-height:680px}
+  .hero{min-height:950px}
   .hero-content{padding:90px 0 52px}
   .hero-actions{display:grid}
   .button{width:100%}
