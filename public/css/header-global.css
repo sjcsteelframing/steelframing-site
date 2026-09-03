@@ -102,7 +102,18 @@
    ============================================= */
 .container{max-width:1200px;margin:0 auto;padding:0 24px}
 .site-footer{background:#081726;color:#fff;padding:58px 0 24px}
-.footer-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:40px}
+.footer-grid{display:grid;grid-template-columns:1.2fr .7fr .7fr 1.2fr;gap:40px}
+
+.footer-newsletter{display:flex;flex-direction:column;gap:.7rem;align-content:start}
+.footer-newsletter h4{color:#fff;font-size:.95rem;font-weight:600;margin:0;letter-spacing:.03em;text-transform:uppercase}
+.footer-newsletter>p{color:#aebdca;font-size:.875rem;margin:0}
+.newsletter-form{display:flex;gap:.45rem;flex-wrap:wrap}
+.newsletter-form input[type="email"]{flex:1;min-width:120px;padding:.48rem .7rem;border:1px solid rgba(255,255,255,.2);border-radius:4px;background:rgba(255,255,255,.07);color:#fff;font-size:.84rem;outline:none;transition:border-color .2s}
+.newsletter-form input[type="email"]:focus{border-color:#2E5A8F}
+.newsletter-form input[type="email"]::placeholder{color:rgba(255,255,255,.35)}
+.newsletter-form button{padding:.48rem .95rem;background:#2E5A8F;color:#fff;border:none;border-radius:4px;font-size:.84rem;font-weight:600;cursor:pointer;white-space:nowrap;transition:background .2s}
+.newsletter-form button:hover{background:#3a70ab}
+.newsletter-lgpd{font-size:.72rem;color:rgba(255,255,255,.35);margin:0}
 .footer-brand p{max-width:420px;color:#aebdca;margin-top:12px;font-size:.92rem}
 .footer-nav,.footer-meta{display:grid;gap:10px;align-content:start}
 .footer-nav a,.footer-meta a{color:#dce5eb;text-decoration:none;font-size:.92rem}
