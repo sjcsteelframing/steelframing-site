@@ -324,7 +324,7 @@
         <div class="footer-newsletter">
       <h4>Newsletter</h4>
       <p>Novidades sobre Steel Framing direto no seu e-mail.</p>
-      <form action="https://3522496b.sibforms.com/serve/MUIFAM03wxd98s5MSCmwUDOVR_0CMCKQvMPrLRvUcUbjRnjANC-O4i-Dbo53tx2Wb2Nc9pk6MwQ_MB67bMGNU_nohGTAoCs_bLHB02OCN9WsrryDk79ZmN2bE9FYW-O9YtX1iPBVALR9RSrdYJGj1A_7xuMcY8fZR2VIubnhZtyawGme4LpyHYNPtBnEZMRJJZOXjXMkjKonvRY8kA==" method="POST" class="newsletter-form">
+      <form action="/api/subscribe" method="POST" class="newsletter-form">
         <input type="email" name="EMAIL" placeholder="seu@email.com" required autocomplete="email">
         <input type="hidden" name="email_address_check" value="">
         <input type="hidden" name="locale" value="pt">
@@ -377,10 +377,15 @@
     e.preventDefault();
     var btn=form.querySelector('button');
     btn.disabled=true;btn.textContent='Enviando…';
-    var data=new URLSearchParams(new FormData(form)).toString();
-    fetch(form.action,{method:'POST',body:data,mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'}})
-      .then(function(){
-        form.innerHTML='<p style="color:var(--amber);font-weight:700;margin:0">✓ Assinatura confirmada! Obrigado.</p>';
+    var email=form.querySelector('[name="EMAIL"]').value;
+    fetch('/api/subscribe',{method:'POST',body:JSON.stringify({EMAIL:email}),headers:{'Content-Type':'application/json'}})
+      .then(function(r){return r.json()})
+      .then(function(d){
+        if(d.ok){
+          form.innerHTML='<p style="color:var(--amber);font-weight:700;margin:0">✓ Assinatura confirmada! Obrigado.</p>';
+        } else {
+          btn.disabled=false;btn.textContent='Assinar';
+        }
       })
       .catch(function(){btn.disabled=false;btn.textContent='Assinar';});
   });
