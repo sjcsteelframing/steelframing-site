@@ -165,3 +165,11 @@
 .gallery-dots{display:flex;justify-content:center;gap:8px;padding:16px 0 4px}
 .gallery-dot{width:9px;height:9px;border-radius:50%;border:0;background:rgba(0,0,0,.18);cursor:pointer;padding:0;transition:background .25s,transform .25s}
 .gallery-dot.active{background:#2E5A8F;transform:scale(1.25)}
+
+/* === ÁGAPE RODAPÉ === */
+.footer-agape{margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.12)}
+.footer-agape p{color:#aebdca;font-size:.87rem;margin:8px 0 0}
+.footer-agape a{color:#dce5eb;text-decoration:none}
+.footer-agape a:hover{color:#fff}
+.agape-footer-badge{display:inline-block;background:#fff;border-radius:8px;padding:5px 10px;line-height:0}
+.agape-footer-logo{max-height:28px;width:auto;display:block}
