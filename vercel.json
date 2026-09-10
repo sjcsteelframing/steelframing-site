@@ -23,6 +23,14 @@
   ],
   "rewrites": [
     {
+      "source": "/busca",
+      "destination": "/busca/index.html"
+    },
+    {
+      "source": "/busca/",
+      "destination": "/busca/index.html"
+    },
+    {
       "source": "/",
       "destination": "/content/index.html"
     },

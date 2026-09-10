@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Buscar | Steel Framing</title>
+<meta name="description" content="Pesquise conteúdos sobre Light Steel Framing, normas, financiamento, comparativos e mais."/>
+<meta name="robots" content="noindex"/>
+<link rel="icon" href="/images/home/logo-steel-framing.png" type="image/png"/>
+<link rel="stylesheet" href="/css/header-global.css"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XGCC5SVH8F"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XGCC5SVH8F');</script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#FAFAF8;color:#1a2e3d;margin:0}
+.busca-hero{background:#fff;border-bottom:1px solid rgba(0,0,0,.08);padding:48px 24px 40px}
+.busca-hero .wrap{max-width:720px;margin:0 auto}
+.busca-hero h1{font-size:1.6rem;font-weight:700;color:#1a2e3d;margin:0 0 6px}
+.busca-hero p{color:#6b7e8c;font-size:.95rem;margin:0 0 24px}
+.search-form{display:flex;gap:10px;max-width:600px}
+.search-form input{flex:1;padding:12px 16px;border:2px solid #d0dce6;border-radius:8px;font-size:1rem;color:#1a2e3d;outline:none;transition:border-color .2s}
+.search-form input:focus{border-color:#2E5A8F}
+.search-form button{padding:12px 22px;background:#2E5A8F;color:#fff;border:none;border-radius:8px;font-size:.95rem;font-weight:600;cursor:pointer;white-space:nowrap;transition:background .2s}
+.search-form button:hover{background:#3a70ab}
+.busca-results{max-width:720px;margin:40px auto;padding:0 24px}
+.result-count{font-size:.88rem;color:#6b7e8c;margin-bottom:20px}
+.result-item{background:#fff;border:1px solid #e0e8ef;border-radius:10px;padding:20px 24px;margin-bottom:16px;transition:box-shadow .2s}
+.result-item:hover{box-shadow:0 4px 16px rgba(46,90,143,.12)}
+.result-item a{text-decoration:none;color:inherit;display:block}
+.result-title{font-size:1.1rem;font-weight:700;color:#2E5A8F;margin:0 0 4px}
+.result-url{font-size:.78rem;color:#6b7e8c;margin:0 0 8px}
+.result-desc{font-size:.9rem;color:#3d5060;margin:0 0 10px;line-height:1.5}
+.result-headings{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.result-tag{background:#eef3f8;color:#2E5A8F;font-size:.75rem;padding:3px 8px;border-radius:4px;font-weight:500}
+.no-results{text-align:center;padding:48px 24px;color:#6b7e8c}
+.no-results strong{display:block;font-size:1.1rem;color:#1a2e3d;margin-bottom:8px}
+mark{background:#fff3cd;color:inherit;padding:0 2px;border-radius:2px}
+@media(max-width:600px){.search-form{flex-direction:column}.busca-hero{padding:32px 16px 28px}}
+</style>
+</head>
+<body>
+<header class="site-header" id="topo">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="steelframing.com.br - página inicial">
+      <img class="brand-logo" src="/images/home/logo-steel-framing.png" alt="Steel Framing"/>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Abrir menu</span>
+    </button>
+    <nav class="main-nav" id="menu-principal" aria-label="Navegação principal">
+      <a href="/">Home</a>
+      <a href="/steel-framing/o-que-e-light-steel-framing/">Steel Framing</a>
+      <a href="/mercado-de-investimento/airbnb-e-aluguel/">Mercado de Investimento</a>
+      <a href="/steel-framing-x-alvenaria/">Steel Framing vs Alvenaria</a>
+      <a href="/sobre/">Sobre</a>
+      <a href="mailto:pedro@steelframing.com.br">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<section class="busca-hero">
+  <div class="wrap">
+    <h1>Buscar no site</h1>
+    <p>Pesquise em todo o conteúdo do steelframing.com.br</p>
+    <form class="search-form" id="search-form" role="search">
+      <input type="search" id="search-input" placeholder="Ex: NBR 16970, financiamento, custo…"
+             autocomplete="off" autocorrect="off" spellcheck="false"
+             aria-label="Campo de busca"/>
+      <button type="submit">Buscar</button>
+    </form>
+  </div>
+</section>
+
+<div class="busca-results" id="results-area" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/7.0.0/fuse.min.js"></script>
+<script>
+(function(){
+  var fuse, pages = [];
+
+  function hl(str, term) {
+    if (!term || !str) return str || '';
+    var re = new RegExp('(' + term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + ')', 'gi');
+    return str.replace(re, '<mark>$1</mark>');
+  }
+
+  function render(results, query) {
+    var area = document.getElementById('results-area');
+    if (!query) { area.innerHTML = ''; return; }
+    if (!results.length) {
+      area.innerHTML = '<div class="no-results"><strong>Nenhum resultado encontrado</strong>Tente termos diferentes ou mais curtos.</div>';
+      return;
+    }
+    var html = '<p class="result-count">' + results.length + ' resultado' + (results.length > 1 ? 's' : '') + ' para "<strong>' + query + '</strong>"</p>';
+    results.forEach(function(r) {
+      var item = r.item;
+      var tags = (item.headings || []).slice(0,4).map(function(h){
+        return '<span class="result-tag">' + hl(h, query) + '</span>';
+      }).join('');
+      html += '<div class="result-item">'
+        + '<a href="' + item.url + '">'
+        + '<p class="result-title">' + hl(item.title, query) + '</p>'
+        + '<p class="result-url">steelframing.com.br' + item.url + '</p>'
+        + '<p class="result-desc">' + hl(item.description || item.excerpt, query) + '</p>'
+        + (tags ? '<div class="result-headings">' + tags + '</div>' : '')
+        + '</a></div>';
+    });
+    area.innerHTML = html;
+  }
+
+  function search(query) {
+    if (!query || !fuse) { render([], query); return; }
+    var results = fuse.search(query, { limit: 12 });
+    render(results, query);
+    gtag('event', 'site_search', { search_term: query });
+  }
+
+  function getQ() {
+    return new URLSearchParams(window.location.search).get('q') || '';
+  }
+
+  fetch('/busca/search-index.json')
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      pages = data;
+      fuse = new Fuse(pages, {
+        keys: [
+          { name: 'title',       weight: 3 },
+          { name: 'headings',    weight: 2 },
+          { name: 'description', weight: 1.5 },
+          { name: 'excerpt',     weight: 1 }
+        ],
+        threshold: 0.35,
+        includeScore: true,
+        ignoreLocation: true,
+        minMatchCharLength: 2
+      });
+      var q = getQ();
+      if (q) {
+        document.getElementById('search-input').value = q;
+        search(q);
+      }
+    });
+
+  document.getElementById('search-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    var q = document.getElementById('search-input').value.trim();
+    history.replaceState(null,'','/busca/' + (q ? '?q=' + encodeURIComponent(q) : ''));
+    search(q);
+  });
+
+  document.getElementById('search-input').addEventListener('input', function(){
+    var q = this.value.trim();
+    if (q.length >= 2 || q.length === 0) search(q);
+  });
+
+  // menu toggle (padrão do site)
+  var toggle = document.querySelector('.menu-toggle');
+  var nav = document.querySelector('.main-nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', function(){
+      var open = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  }
+})();
+</script>
+</body>
+</html>

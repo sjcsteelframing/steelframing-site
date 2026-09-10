@@ -173,3 +173,24 @@
 .footer-agape a:hover{color:#fff}
 .agape-footer-badge{display:inline-block;background:#fff;border-radius:8px;padding:5px 10px;line-height:0}
 .agape-footer-logo{max-height:28px;width:auto;display:block}
+
+/* =============================================
+   BUSCA — ícone no nav
+   ============================================= */
+.nav-search-btn {
+  display: flex;
+  align-items: center;
+  color: #24313d;
+  text-decoration: none;
+  padding: 4px;
+  border-radius: 6px;
+  transition: color .2s, background .2s;
+}
+.nav-search-btn:hover {
+  color: #c8922a;
+  background: rgba(0,0,0,.04);
+}
+@media (max-width: 768px) {
+  .nav-search-btn { padding: 10px 0; }
+  .nav-search-btn svg { width: 20px; height: 20px; }
+}
