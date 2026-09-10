@@ -83,6 +83,30 @@
       "destination": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/index.html"
     },
     {
+      "source": "/mercado-de-investimento/financiamento-steel-framing/avaliacao-bancaria",
+      "destination": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/avaliacao-bancaria/index.html"
+    },
+    {
+      "source": "/mercado-de-investimento/financiamento-steel-framing/avaliacao-bancaria/",
+      "destination": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/avaliacao-bancaria/index.html"
+    },
+    {
+      "source": "/mercado-de-investimento/financiamento-steel-framing/caixa",
+      "destination": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/caixa/index.html"
+    },
+    {
+      "source": "/mercado-de-investimento/financiamento-steel-framing/caixa/",
+      "destination": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/caixa/index.html"
+    },
+    {
+      "source": "/mercado-de-investimento/financiamento-steel-framing/capital-proprio-ou-financiamento",
+      "destination": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/capital-proprio-ou-financiamento/index.html"
+    },
+    {
+      "source": "/mercado-de-investimento/financiamento-steel-framing/capital-proprio-ou-financiamento/",
+      "destination": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/capital-proprio-ou-financiamento/index.html"
+    },
+    {
       "source": "/mercado-de-investimento/financiamento-steel-framing/:path*",
       "destination": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/:path*"
     }
