@@ -121,7 +121,7 @@ p{margin:0 0 1rem}
 .path-card p{color:var(--muted);font-size:.96rem;margin-top:14px}
 .path-link{margin-top:auto;padding-top:20px;font-weight:750;font-size:.9rem;color:var(--navy)}
 
-.featured-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.featured-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
 .feature-card{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff}
 .feature-image,.investment-visual{
   display:block;min-height:250px;background:
