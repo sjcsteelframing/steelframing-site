@@ -7,3 +7,4 @@
 .reveal.visible{opacity:1;transform:none}
 @media(max-width:900px){.topbar .wrap{display:block}.topbar .wrap span:last-child{display:none}.hero{min-height:clamp(400px,60vw,600px)}.hero:after{background:linear-gradient(90deg,rgba(5,20,33,.9),rgba(5,20,33,.58))}.page-grid{display:block;padding-top:30px}.toc{display:none}.mobile-toc{display:block;margin-bottom:25px;border:1px solid var(--line);padding:13px 16px;border-radius:8px}.mobile-toc a{display:block;padding:6px 0}.chain,.related{grid-template-columns:1fr}.footer .wrap{display:block}.content{max-width:none}}
 @media(max-width:560px){.wrap{width:min(100% - 26px,var(--max))}.hero{min-height:clamp(360px,65vw,520px)}.hero-copy{padding:58px 0}.lead{font-size:18px}.content p,.content ul,.content ol{font-size:16px}h2{font-size:30px}.visual{margin-left:-4px;margin-right:-4px}}
+.hero-copy .eyebrow{background:rgba(255,255,255,.82);color:#0d1f2d;padding:4px 12px;border-radius:4px;display:inline-block}
