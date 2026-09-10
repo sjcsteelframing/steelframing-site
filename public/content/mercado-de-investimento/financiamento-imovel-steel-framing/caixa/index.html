@@ -205,4 +205,29 @@ Avaliação: R$ 550 mil</p>
   });
 })();
 </script>
+<script>
+(function(){
+  if(!('IntersectionObserver' in window)) return;
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+  }, {threshold:0, rootMargin:'0px 0px -40px 0px'});
+  function init(){
+    document.querySelectorAll('.content section').forEach(function(sec){
+      if(sec.getBoundingClientRect().top > window.innerHeight * 0.9){
+        sec.classList.add('reveal');
+        obs.observe(sec);
+      }
+    });
+  }
+  if(document.readyState === 'complete'){
+    requestAnimationFrame(function(){ requestAnimationFrame(init); });
+  } else {
+    window.addEventListener('load', function(){
+      requestAnimationFrame(function(){ requestAnimationFrame(init); });
+    });
+  }
+})();
+</script>
 </body></html>
