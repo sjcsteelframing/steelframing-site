@@ -150,10 +150,19 @@
     if (e.key === 'Escape') closeLbx();
   });
 
-  // Delegação: abre ao clicar em qualquer .visual img
+  // Delegação: .visual img (páginas FISF)
   document.addEventListener('click', function (e) {
     var img = e.target.closest ? e.target.closest('.visual img') : null;
     if (!img && e.target.tagName === 'IMG' && e.target.closest('.visual')) img = e.target;
     if (img) { e.preventDefault(); openLbx(img.src, img.alt); }
+  });
+
+  // Delegação: .figure-button[data-full] (páginas antigas)
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest ? e.target.closest('.figure-button') : null;
+    if (btn && btn.getAttribute('data-full')) {
+      e.preventDefault();
+      openLbx(btn.getAttribute('data-full'), btn.getAttribute('aria-label') || '');
+    }
   });
 })();
