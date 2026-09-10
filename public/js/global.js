@@ -103,7 +103,7 @@
     '.lbx-close{position:absolute;top:16px;right:20px;color:#fff;font-size:36px;line-height:1;cursor:pointer;background:none;border:none;padding:4px 10px;opacity:.75}',
     '.lbx-close:hover{opacity:1}',
     '.lbx-hint{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.55);font-size:13px;pointer-events:none;white-space:nowrap}',
-    '.visual img{cursor:zoom-in}'
+    '.visual img{cursor:zoom-in}.figure-wide img{cursor:zoom-in}.figure-button{cursor:zoom-in}.figure-button img{cursor:zoom-in}'
   ].join('');
   document.head.appendChild(style);
 
@@ -164,5 +164,12 @@
       e.preventDefault();
       openLbx(btn.getAttribute('data-full'), btn.getAttribute('aria-label') || '');
     }
+  });
+
+  // Delegação: .figure-wide img (mercado de investimento / airbnb)
+  document.addEventListener('click', function (e) {
+    var img = e.target.closest ? e.target.closest('.figure-wide img') : null;
+    if (!img && e.target.tagName === 'IMG' && e.target.closest && e.target.closest('.figure-wide')) img = e.target;
+    if (img) { e.preventDefault(); openLbx(img.src, img.alt); }
   });
 })();
