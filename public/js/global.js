@@ -91,3 +91,69 @@
     gallery.addEventListener('touchend', function () { setTimeout(start, 1500); }, { passive: true });
   });
 })();
+
+// ── Lightbox para infográficos (.visual img) ──────────────────────────────────
+(function () {
+  // CSS injetado via JS — cobre todas as páginas sem alterar CSS individuais
+  var style = document.createElement('style');
+  style.textContent = [
+    '.lbx-overlay{position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:9999;display:flex;align-items:center;justify-content:center;cursor:zoom-out;opacity:0;transition:opacity .25s;pointer-events:none}',
+    '.lbx-overlay.open{opacity:1;pointer-events:auto}',
+    '.lbx-overlay img{max-width:92vw;max-height:92vh;border-radius:6px;box-shadow:0 20px 60px rgba(0,0,0,.5);cursor:default;object-fit:contain}',
+    '.lbx-close{position:absolute;top:16px;right:20px;color:#fff;font-size:36px;line-height:1;cursor:pointer;background:none;border:none;padding:4px 10px;opacity:.75}',
+    '.lbx-close:hover{opacity:1}',
+    '.lbx-hint{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.55);font-size:13px;pointer-events:none;white-space:nowrap}',
+    '.visual img{cursor:zoom-in}'
+  ].join('');
+  document.head.appendChild(style);
+
+  // Overlay
+  var overlay = document.createElement('div');
+  overlay.className = 'lbx-overlay';
+  overlay.setAttribute('role', 'dialog');
+  overlay.setAttribute('aria-modal', 'true');
+
+  var lbxImg = document.createElement('img');
+  var closeBtn = document.createElement('button');
+  closeBtn.className = 'lbx-close';
+  closeBtn.innerHTML = '&times;';
+  closeBtn.setAttribute('aria-label', 'Fechar imagem');
+
+  var hint = document.createElement('div');
+  hint.className = 'lbx-hint';
+  hint.textContent = 'Clique fora ou pressione Esc para fechar';
+
+  overlay.appendChild(lbxImg);
+  overlay.appendChild(closeBtn);
+  overlay.appendChild(hint);
+  document.body.appendChild(overlay);
+
+  function openLbx(src, alt) {
+    lbxImg.src = src;
+    lbxImg.alt = alt || '';
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+
+  function closeLbx() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // Fechar ao clicar fora da imagem
+  overlay.addEventListener('click', function (e) {
+    if (e.target !== lbxImg) closeLbx();
+  });
+  closeBtn.addEventListener('click', closeLbx);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeLbx();
+  });
+
+  // Delegação: abre ao clicar em qualquer .visual img
+  document.addEventListener('click', function (e) {
+    var img = e.target.closest ? e.target.closest('.visual img') : null;
+    if (!img && e.target.tagName === 'IMG' && e.target.closest('.visual')) img = e.target;
+    if (img) { e.preventDefault(); openLbx(img.src, img.alt); }
+  });
+})();
