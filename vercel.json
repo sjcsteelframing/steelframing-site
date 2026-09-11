@@ -31,6 +31,14 @@
       "destination": "/busca/index.html"
     },
     {
+      "source": "/contato",
+      "destination": "/content/contato/index.html"
+    },
+    {
+      "source": "/contato/",
+      "destination": "/content/contato/index.html"
+    },
+    {
       "source": "/",
       "destination": "/content/index.html"
     },
