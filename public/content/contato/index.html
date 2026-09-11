@@ -42,12 +42,22 @@
 <style>
 /* ── HERO COM FORMULÁRIO ────────────────────────── */
 .contato-hero {
-  background: #1a2e3d;
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cpath d='M0 40h80M40 0v80' stroke='rgba(255,255,255,0.035)' stroke-width='1'/%3E%3C/svg%3E");
+  position: relative;
+  background: url('/images/home/SF_hero_principal.png') center 30% / cover no-repeat;
   padding: 64px 24px 80px;
 }
+.contato-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cpath d='M0 40h80M40 0v80' stroke='rgba(255,255,255,0.04)' stroke-width='1'/%3E%3C/svg%3E"),
+    rgba(8,20,32,0.72);
+  z-index: 0;
+}
 .contato-hero-inner {
+  position: relative;
+  z-index: 1;
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
