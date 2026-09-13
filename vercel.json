@@ -40,6 +40,11 @@
     { "source": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/:path*",
       "destination": "/mercado-de-investimento/financiamento-steel-framing/:path*", "permanent": true },
 
+    { "source": "/mercado-de-investimento/airbnb-e-aluguel/p1.html", "destination": "/mercado-de-investimento/airbnb-e-aluguel/prazo-e-escala/", "permanent": true },
+    { "source": "/mercado-de-investimento/airbnb-e-aluguel/p2.html", "destination": "/mercado-de-investimento/airbnb-e-aluguel/produto-e-conforto/", "permanent": true },
+    { "source": "/mercado-de-investimento/airbnb-e-aluguel/p3.html", "destination": "/mercado-de-investimento/airbnb-e-aluguel/operacao-e-manutencao/", "permanent": true },
+    { "source": "/mercado-de-investimento/airbnb-e-aluguel/p4.html", "destination": "/mercado-de-investimento/airbnb-e-aluguel/viabilidade-economica/", "permanent": true },
+
     { "source": "/mercado-de-investimento",  "destination": "/mercado-de-investimento/airbnb-e-aluguel/", "permanent": true },
     { "source": "/mercado-de-investimento/", "destination": "/mercado-de-investimento/airbnb-e-aluguel/", "permanent": true },
     { "source": "/steel-framing",  "destination": "/steel-framing/o-que-e-light-steel-framing/", "permanent": true },
