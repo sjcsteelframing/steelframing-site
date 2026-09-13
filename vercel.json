@@ -122,6 +122,27 @@
       "destination": "/content/mercado-de-investimento/airbnb/index.html" },
     { "source": "/mercado-de-investimento/airbnb-e-aluguel/",
       "destination": "/content/mercado-de-investimento/airbnb/index.html" },
+
+    { "source": "/mercado-de-investimento/airbnb-e-aluguel/prazo-e-escala",
+      "destination": "/content/mercado-de-investimento/airbnb/prazo-e-escala/index.html" },
+    { "source": "/mercado-de-investimento/airbnb-e-aluguel/prazo-e-escala/",
+      "destination": "/content/mercado-de-investimento/airbnb/prazo-e-escala/index.html" },
+
+    { "source": "/mercado-de-investimento/airbnb-e-aluguel/produto-e-conforto",
+      "destination": "/content/mercado-de-investimento/airbnb/produto-e-conforto/index.html" },
+    { "source": "/mercado-de-investimento/airbnb-e-aluguel/produto-e-conforto/",
+      "destination": "/content/mercado-de-investimento/airbnb/produto-e-conforto/index.html" },
+
+    { "source": "/mercado-de-investimento/airbnb-e-aluguel/operacao-e-manutencao",
+      "destination": "/content/mercado-de-investimento/airbnb/operacao-e-manutencao/index.html" },
+    { "source": "/mercado-de-investimento/airbnb-e-aluguel/operacao-e-manutencao/",
+      "destination": "/content/mercado-de-investimento/airbnb/operacao-e-manutencao/index.html" },
+
+    { "source": "/mercado-de-investimento/airbnb-e-aluguel/viabilidade-economica",
+      "destination": "/content/mercado-de-investimento/airbnb/viabilidade-economica/index.html" },
+    { "source": "/mercado-de-investimento/airbnb-e-aluguel/viabilidade-economica/",
+      "destination": "/content/mercado-de-investimento/airbnb/viabilidade-economica/index.html" },
+
     { "source": "/mercado-de-investimento/airbnb-e-aluguel/:path*",
       "destination": "/content/mercado-de-investimento/airbnb/:path*" },
 
