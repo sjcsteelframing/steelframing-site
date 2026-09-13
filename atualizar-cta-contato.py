@@ -1,16 +1,24 @@
 #!/usr/bin/env python3
 """
-Substitui o botão CTA "Fale conosco" com mailto: na seção closing-parallax
-por href="/contato/" em todos os HTMLs do site.
-Idempotente.
+Substitui qualquer <a class="btn-primary" href="mailto:..."> na seção
+closing-parallax por href="/contato/" — preserva o texto original do link.
+Também cobre o padrão antigo "Fale conosco" caso ainda exista.
+Idempotente — pula arquivos sem mailto: em btn-primary.
 """
 import os, re
 
 BASE  = os.path.join(os.path.dirname(__file__), "public", "content")
 BUSCA = os.path.join(os.path.dirname(__file__), "public", "busca", "index.html")
 
-# Padrão: qualquer <a ... href="mailto:..."> que contenha "Fale conosco"
-MAILTO_CTA = re.compile(
+# Padrão 1: btn-primary com mailto (qualquer texto)
+# Ex: <a class="btn-primary" href="mailto:...">Fale com a gente →</a>
+BTN_PRIMARY = re.compile(
+    r'(<a\s+[^>]*?class="btn-primary"[^>]*?)href="mailto:[^"]*"([^>]*>)',
+    re.IGNORECASE | re.DOTALL
+)
+
+# Padrão 2 (legado): texto "Fale conosco" com mailto (qualquer classe)
+FALE_CONOSCO = re.compile(
     r'<a\s+([^>]*?)href="mailto:[^"]*"([^>]*)>\s*Fale conosco\s*</a>',
     re.IGNORECASE | re.DOTALL
 )
@@ -29,15 +37,20 @@ def process(path):
     with open(path, encoding="utf-8") as f:
         content = f.read()
 
-    if 'Fale conosco' not in content or 'mailto:' not in content:
+    if 'mailto:' not in content:
         return "skip"
 
-    def replacer(m):
-        before = m.group(1)
-        after  = m.group(2)
-        return f'<a {before}href="/contato/"{after}>Fale conosco</a>'
+    # Padrão 1: btn-primary mailto
+    new_content = BTN_PRIMARY.sub(
+        lambda m: m.group(1) + 'href="/contato/"' + m.group(2),
+        content
+    )
 
-    new_content = MAILTO_CTA.sub(replacer, content)
+    # Padrão 2: "Fale conosco" mailto (legado)
+    new_content = FALE_CONOSCO.sub(
+        lambda m: f'<a {m.group(1)}href="/contato/"{m.group(2)}>Fale conosco</a>',
+        new_content
+    )
 
     if new_content == content:
         return "no-match"
