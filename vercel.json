@@ -40,8 +40,6 @@
     { "source": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/:path*",
       "destination": "/mercado-de-investimento/financiamento-steel-framing/:path*", "permanent": true },
 
-    { "source": "/content/:path*", "destination": "/", "permanent": true },
-
     { "source": "/mercado-de-investimento",  "destination": "/mercado-de-investimento/airbnb-e-aluguel/", "permanent": true },
     { "source": "/mercado-de-investimento/", "destination": "/mercado-de-investimento/airbnb-e-aluguel/", "permanent": true },
     { "source": "/steel-framing",  "destination": "/steel-framing/o-que-e-light-steel-framing/", "permanent": true },
