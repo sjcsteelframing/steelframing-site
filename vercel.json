@@ -50,6 +50,9 @@
     { "source": "/content/steel-framing/enferruja",  "destination": "/steel-framing/enferruja/", "permanent": true },
     { "source": "/content/steel-framing/enferruja/", "destination": "/steel-framing/enferruja/", "permanent": true },
 
+    { "source": "/content/steel-framing/pega-fogo",  "destination": "/steel-framing/pega-fogo/", "permanent": true },
+    { "source": "/content/steel-framing/pega-fogo/", "destination": "/steel-framing/pega-fogo/", "permanent": true },
+
     { "source": "/steel-framing",  "destination": "/steel-framing/o-que-e-light-steel-framing/", "permanent": true },
     { "source": "/steel-framing/", "destination": "/steel-framing/o-que-e-light-steel-framing/", "permanent": true },
     { "source": "/steel-framing-x-alvenaria", "destination": "/steel-framing-x-alvenaria/", "permanent": true }
@@ -89,6 +92,9 @@
 
     { "source": "/steel-framing/enferruja",  "destination": "/content/steel-framing/enferruja/index.html" },
     { "source": "/steel-framing/enferruja/", "destination": "/content/steel-framing/enferruja/index.html" },
+
+    { "source": "/steel-framing/pega-fogo",  "destination": "/content/steel-framing/pega-fogo/index.html" },
+    { "source": "/steel-framing/pega-fogo/", "destination": "/content/steel-framing/pega-fogo/index.html" },
 
     { "source": "/steel-framing/o-que-e-light-steel-framing/:path*",
       "destination": "/content/o-que-e-steel-framing/:path*" },
