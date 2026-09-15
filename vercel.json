@@ -53,6 +53,9 @@
     { "source": "/content/steel-framing/pega-fogo",  "destination": "/steel-framing/pega-fogo/", "permanent": true },
     { "source": "/content/steel-framing/pega-fogo/", "destination": "/steel-framing/pega-fogo/", "permanent": true },
 
+    { "source": "/content/steel-framing/quanto-tempo-dura",  "destination": "/steel-framing/quanto-tempo-dura/", "permanent": true },
+    { "source": "/content/steel-framing/quanto-tempo-dura/", "destination": "/steel-framing/quanto-tempo-dura/", "permanent": true },
+
     { "source": "/steel-framing",  "destination": "/steel-framing/o-que-e-light-steel-framing/", "permanent": true },
     { "source": "/steel-framing/", "destination": "/steel-framing/o-que-e-light-steel-framing/", "permanent": true },
     { "source": "/steel-framing-x-alvenaria", "destination": "/steel-framing-x-alvenaria/", "permanent": true }
@@ -95,6 +98,9 @@
 
     { "source": "/steel-framing/pega-fogo",  "destination": "/content/steel-framing/pega-fogo/index.html" },
     { "source": "/steel-framing/pega-fogo/", "destination": "/content/steel-framing/pega-fogo/index.html" },
+
+    { "source": "/steel-framing/quanto-tempo-dura",  "destination": "/content/steel-framing/quanto-tempo-dura/index.html" },
+    { "source": "/steel-framing/quanto-tempo-dura/", "destination": "/content/steel-framing/quanto-tempo-dura/index.html" },
 
     { "source": "/steel-framing/o-que-e-light-steel-framing/:path*",
       "destination": "/content/o-que-e-steel-framing/:path*" },

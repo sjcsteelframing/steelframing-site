@@ -28,6 +28,7 @@ MAPA = {
     # steel-framing FAQ
     "public/content/steel-framing/enferruja/index.html": "/steel-framing/enferruja/",
     "public/content/steel-framing/pega-fogo/index.html": "/steel-framing/pega-fogo/",
+    "public/content/steel-framing/quanto-tempo-dura/index.html": "/steel-framing/quanto-tempo-dura/",
     # steel-framing x alvenaria
     "public/content/steelframing-vs-alvenaria/index.html": "/steel-framing-x-alvenaria/",
     "public/content/steelframing-vs-alvenaria/custo/index.html": "/steel-framing-x-alvenaria/custo/",
