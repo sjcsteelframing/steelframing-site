@@ -210,6 +210,13 @@
       </div>
     </section>
 
+    <section class="faq-destaque section section-soft" aria-labelledby="faq-destaque-title">
+      <div class="container narrow faq-destaque-inner">
+        <p class="section-kicker">DÚVIDAS FREQUENTES</p>
+        <div id="duvida-dinamica"><!-- preenchido pelo script --></div>
+      </div>
+    </section>
+
     <section class="logic section">
       <div class="container logic-grid">
         <div>
@@ -398,6 +405,44 @@
 })();
 </script>
 <script src="/js/global.js"></script>
+<script>
+(function(){
+  var perguntas = [
+    {
+      titulo: "Steel Frame enferruja?",
+      descricao: "Como a galvanização protege o aço, quais condições aumentam o risco de corrosão e o que o projeto precisa resolver.",
+      href: "/steel-framing/enferruja/"
+    },
+    {
+      titulo: "Steel Frame pega fogo?",
+      descricao: "O aço não queima — mas perde resistência com o calor. Como a proteção passiva ao fogo funciona e o que a norma exige.",
+      href: "/steel-framing/pega-fogo/"
+    },
+    {
+      titulo: "Quanto tempo dura um imóvel em Steel Framing?",
+      descricao: "VUP mínima de 40 anos pela NBR 15575, fatores de durabilidade e o plano de manutenção que mantém o sistema íntegro.",
+      href: "/steel-framing/quanto-tempo-dura/"
+    },
+    {
+      titulo: "É possível financiar um imóvel em Steel Framing?",
+      descricao: "NBR 16970, DATec/SiNAT e documentação bancária: o que o banco exige para financiar um imóvel construído em LSF.",
+      href: "/mercado-de-investimento/financiamento-steel-framing/"
+    }
+  ];
+  var el = document.getElementById('duvida-dinamica');
+  if (!el) return;
+  var idx = 0;
+  try {
+    idx = (parseInt(localStorage.getItem('sf_duvida_idx') || '0', 10) || 0) % perguntas.length;
+    localStorage.setItem('sf_duvida_idx', String((idx + 1) % perguntas.length));
+  } catch(e) {}
+  var p = perguntas[idx];
+  el.innerHTML =
+    '<h2 id="faq-destaque-title">' + p.titulo + '</h2>' +
+    '<p class="lead">' + p.descricao + '</p>' +
+    '<a class="button button-outline" href="' + p.href + '">Ver resposta completa →</a>';
+})();
+</script>
 <script>
 (function(){
   var form=document.querySelector('.newsletter-form');
