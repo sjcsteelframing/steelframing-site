@@ -77,51 +77,81 @@ body { font-family: 'Poppins', 'Segoe UI', sans-serif; background: var(--bg); co
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(10,25,46,.85) 0%, rgba(10,25,46,.45) 50%, rgba(10,25,46,.1) 100%);
+  background: linear-gradient(115deg, rgba(6,21,34,.92) 0%, rgba(6,21,34,.62) 50%, rgba(6,21,34,.2) 100%);
   display: flex;
   align-items: flex-end;
-  padding: clamp(24px, 5vw, 56px);
+  padding: clamp(24px, 5vw, 60px);
 }
 .hero-content {
   max-width: 760px;
 }
 .hero-eyebrow {
   display: inline-block;
-  background: var(--amber);
-  color: #fff;
-  font-size: .65rem;
   font-weight: 700;
-  letter-spacing: 1.5px;
+  letter-spacing: .12em;
+  color: #0d1f2d;
+  font-size: .75rem;
+  margin-bottom: 20px;
+  background: rgba(255,255,255,.82);
+  padding: 4px 12px;
+  border-radius: 4px;
   text-transform: uppercase;
-  padding: 3px 10px;
-  border-radius: 3px;
-  margin-bottom: 16px;
 }
 .hero-content h1 {
   color: #fff;
-  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-size: clamp(2.65rem, 6vw, 5.6rem);
   font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 16px;
+  line-height: 1.1;
+  margin-bottom: 20px;
   letter-spacing: -.02em;
+  max-width: 900px;
 }
 .hero-lead {
   color: rgba(255,255,255,.88);
-  font-size: clamp(.95rem, 2.2vw, 1.2rem);
-  font-weight: 300;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-weight: 400;
   line-height: 1.55;
-  max-width: 640px;
-  letter-spacing: -.01em;
+  max-width: 760px;
 }
 .hero-lead em {
   font-style: normal;
   color: var(--amber);
-  font-weight: 500;
+  font-weight: 600;
 }
 .hero-lead strong {
-  font-weight: 600;
+  font-weight: 700;
   color: #fff;
 }
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 32px;
+}
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: .94rem;
+  border: 1px solid transparent;
+  transition: .2s ease;
+}
+.hero-btn-primary {
+  background: var(--amber);
+  color: #17212b;
+}
+.hero-btn-primary:hover { filter: brightness(1.06); transform: translateY(-1px); }
+.hero-btn-secondary {
+  border-color: rgba(255,255,255,.45);
+  color: #fff;
+  background: rgba(255,255,255,.08);
+}
+.hero-btn-secondary:hover { background: rgba(255,255,255,.16); }
 
 /* ── BREADCRUMB ── */
 .breadcrumb-bar {
@@ -346,7 +376,9 @@ body { font-family: 'Poppins', 'Segoe UI', sans-serif; background: var(--bg); co
 @media (max-width: 600px) {
   .page-hero img { max-height: 320px; object-fit: cover; }
   .hero-overlay { padding: 20px; }
-  .hero-content h1 { font-size: 1.4rem; }
+  .hero-content h1 { font-size: clamp(2rem, 9vw, 2.6rem); }
+  .hero-actions { flex-direction: column; }
+  .hero-btn { width: 100%; justify-content: center; }
   .hero-lead { font-size: .88rem; }
   .intro { margin: 40px auto; }
   .cards, .coming-cards { grid-template-columns: 1fr; }
@@ -390,7 +422,11 @@ body { font-family: 'Poppins', 'Segoe UI', sans-serif; background: var(--bg); co
     <div class="hero-content">
       <span class="hero-eyebrow">Central de Dúvidas</span>
       <h1>Dúvidas sobre<br/>Steel Framing</h1>
-      <p class="hero-lead">Quando perguntamos quem tem dúvidas sobre <em>Steel Framing</em>, todos levantam a mão —<br/>mas muitas delas são <strong>as mesmas</strong>.</p>
+      <p class="hero-lead">Quando perguntamos quem tem dúvidas sobre <em>Steel Framing</em>, todos levantam a mão — mas muitas delas são <strong>as mesmas</strong>.</p>
+      <div class="hero-actions">
+        <a class="hero-btn hero-btn-primary" href="#grupos">Ver todas as dúvidas</a>
+        <a class="hero-btn hero-btn-secondary" href="#cta-contact-form">Enviar minha dúvida</a>
+      </div>
     </div>
   </div>
 </div>
@@ -411,7 +447,7 @@ body { font-family: 'Poppins', 'Segoe UI', sans-serif; background: var(--bg); co
 </section>
 
 <!-- GRUPOS -->
-<div class="groups">
+<div class="groups" id="grupos">
 
   <div class="group reveal">
     <div class="group-header">
