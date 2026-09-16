@@ -379,10 +379,13 @@ body { font-family: 'Poppins', 'Segoe UI', sans-serif; background: var(--bg); co
 
 <!-- HERO com texto sobreposto -->
 <div class="page-hero">
-  <img src="/images/steel-framing/duvidas/hero-duvidas-steel-framing.png"
-       alt="Plateia de palestra com todos os participantes com a mão levantada — o palestrante iluminado no palco ao fundo perguntou quem tem dúvidas sobre Steel Framing"
-       loading="eager"
-       width="1782" height="883"/>
+  <picture>
+    <source media="(max-width:768px)" srcset="/images/steel-framing/duvidas/Mobile_hero-duvidas-steel-framing.png"/>
+    <img src="/images/steel-framing/duvidas/hero-duvidas-steel-framing.png"
+         alt="Plateia de palestra com todos os participantes com a mão levantada — o palestrante iluminado no palco ao fundo perguntou quem tem dúvidas sobre Steel Framing"
+         loading="eager"
+         width="1782" height="883"/>
+  </picture>
   <div class="hero-overlay">
     <div class="hero-content">
       <span class="hero-eyebrow">Central de Dúvidas</span>
@@ -528,12 +531,16 @@ body { font-family: 'Poppins', 'Segoe UI', sans-serif; background: var(--bg); co
   <div class="cta-inner">
     <h2>Sua dúvida não está aqui?</h2>
     <p>Nos envie sua dúvida — teremos muito prazer em esclarecer.</p>
-    <form class="cta-form" id="cta-contact-form">
+    <form class="cta-form" id="cta-contact-form" novalidate>
+      <input type="hidden" name="access_key" value="11988fd7-38b2-4f8f-8a11-15de76c6a952"/>
+      <input type="hidden" name="from_name" value="SteelFraming.com.br"/>
+      <input type="hidden" name="redirect" value="false"/>
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off"/>
       <div class="cta-form-row">
-        <input type="text" name="nome" placeholder="Seu nome" required autocomplete="name"/>
-        <input type="email" name="email" placeholder="Seu e-mail" required autocomplete="email"/>
+        <input type="text" id="cta-nome" name="name" placeholder="Seu nome" required autocomplete="name"/>
+        <input type="email" id="cta-email" name="email" placeholder="Seu e-mail" required autocomplete="email"/>
       </div>
-      <textarea name="mensagem" placeholder="Qual é sua dúvida?" rows="4" required></textarea>
+      <textarea id="cta-mensagem" name="message" placeholder="Qual é sua dúvida?" rows="4" required></textarea>
       <button type="submit" class="btn-enviar">Enviar dúvida</button>
       <div class="cta-form-feedback" id="cta-form-feedback" aria-live="polite"></div>
     </form>
@@ -634,42 +641,44 @@ body { font-family: 'Poppins', 'Segoe UI', sans-serif; background: var(--bg); co
 })();
 </script>
 
-<!-- Formulário de contato CTA -->
+<!-- Formulário de contato CTA — web3forms -->
 <script>
 (function(){
   var form = document.getElementById('cta-contact-form');
   var feedback = document.getElementById('cta-form-feedback');
   if (!form) return;
-  form.addEventListener('submit', function(e) {
+  form.addEventListener('submit', async function(e) {
     e.preventDefault();
+    var nome     = form.querySelector('#cta-nome').value.trim();
+    var email    = form.querySelector('#cta-email').value.trim();
+    var mensagem = form.querySelector('#cta-mensagem').value.trim();
+    if (!nome || !email || !mensagem) {
+      feedback.textContent = 'Preencha todos os campos.';
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      feedback.textContent = 'Confira o e-mail digitado.';
+      return;
+    }
     var btn = form.querySelector('.btn-enviar');
     btn.disabled = true; btn.textContent = 'Enviando…';
     feedback.textContent = '';
-    var data = {
-      nome: form.querySelector('[name="nome"]').value,
-      email: form.querySelector('[name="email"]').value,
-      mensagem: form.querySelector('[name="mensagem"]').value,
-      origem: '/duvidas/'
-    };
-    fetch('/api/contact', {
-      method: 'POST',
-      body: JSON.stringify(data),
-      headers: {'Content-Type': 'application/json'}
-    })
-    .then(function(r){ return r.json(); })
-    .then(function(d){
-      if (d.ok) {
+    var data = new FormData(form);
+    data.set('subject', 'SteelFraming.com.br — Dúvida de ' + nome);
+    try {
+      var res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+      var json = await res.json();
+      if (json.success) {
         form.innerHTML = '<p style="color:var(--amber);font-weight:700;font-size:1rem;text-align:center;padding:24px 0">✓ Dúvida enviada! Entraremos em contato em breve.</p>';
         if (typeof gtag !== 'undefined') gtag('event', 'contact_form_sent', { page: '/duvidas/' });
       } else {
         feedback.textContent = 'Não conseguimos enviar. Tente pelo WhatsApp.';
         btn.disabled = false; btn.textContent = 'Enviar dúvida';
       }
-    })
-    .catch(function(){
+    } catch(err) {
       feedback.textContent = 'Não conseguimos enviar. Tente pelo WhatsApp.';
       btn.disabled = false; btn.textContent = 'Enviar dúvida';
-    });
+    }
   });
 })();
 </script>
