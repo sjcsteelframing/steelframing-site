@@ -2,6 +2,7 @@
   "redirects": [
     { "source": "/:path*/index.html", "destination": "/:path*/", "permanent": true },
 
+    { "source": "/content/index.html", "destination": "/", "permanent": true },
     { "source": "/content",  "destination": "/", "permanent": true },
     { "source": "/content/", "destination": "/", "permanent": true },
 
@@ -56,6 +57,9 @@
     { "source": "/content/steel-framing/quanto-tempo-dura",  "destination": "/steel-framing/quanto-tempo-dura/", "permanent": true },
     { "source": "/content/steel-framing/quanto-tempo-dura/", "destination": "/steel-framing/quanto-tempo-dura/", "permanent": true },
 
+    { "source": "/content/steel-framing/aguenta-vento-forte",  "destination": "/steel-framing/aguenta-vento-forte/", "permanent": true },
+    { "source": "/content/steel-framing/aguenta-vento-forte/", "destination": "/steel-framing/aguenta-vento-forte/", "permanent": true },
+
     { "source": "/steel-framing",  "destination": "/steel-framing/o-que-e-light-steel-framing/", "permanent": true },
     { "source": "/steel-framing/", "destination": "/steel-framing/o-que-e-light-steel-framing/", "permanent": true },
     { "source": "/steel-framing-x-alvenaria", "destination": "/steel-framing-x-alvenaria/", "permanent": true }
@@ -101,6 +105,9 @@
 
     { "source": "/steel-framing/quanto-tempo-dura",  "destination": "/content/steel-framing/quanto-tempo-dura/index.html" },
     { "source": "/steel-framing/quanto-tempo-dura/", "destination": "/content/steel-framing/quanto-tempo-dura/index.html" },
+
+    { "source": "/steel-framing/aguenta-vento-forte",  "destination": "/content/steel-framing/aguenta-vento-forte/index.html" },
+    { "source": "/steel-framing/aguenta-vento-forte/", "destination": "/content/steel-framing/aguenta-vento-forte/index.html" },
 
     { "source": "/steel-framing/o-que-e-light-steel-framing/:path*",
       "destination": "/content/o-que-e-steel-framing/:path*" },
