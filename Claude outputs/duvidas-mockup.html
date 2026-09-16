@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Dúvidas sobre Steel Framing — steelframing.com.br</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --navy: #0d2740;
+    --navy2: #173d5f;
+    --amber: #c99a3d;
+    --ink: #1d2935;
+    --muted: #63707b;
+    --line: #dce3e8;
+    --bg: #f5f7f8;
+    --white: #ffffff;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--ink); }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--navy);
+    padding: 0 24px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo { color: #fff; font-weight: 700; font-size: 1.1rem; letter-spacing: .5px; }
+  .logo span { color: var(--amber); }
+  nav a {
+    color: rgba(255,255,255,.75);
+    text-decoration: none;
+    font-size: .85rem;
+    margin-left: 20px;
+    font-weight: 500;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    min-height: 520px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+  /* placeholder da imagem — substituir por <img> real */
+  .hero-img-placeholder {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(160deg, #1a3a5c 0%, #0d2740 60%, #091d30 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-img-placeholder .concept-note {
+    color: rgba(255,255,255,.18);
+    font-size: .75rem;
+    font-style: italic;
+    text-align: center;
+    max-width: 320px;
+    line-height: 1.6;
+    border: 1px dashed rgba(255,255,255,.15);
+    padding: 16px 20px;
+    border-radius: 6px;
+  }
+  /* silhuetas de mãos levantadas — decorativas, com CSS */
+  .hands {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 40px;
+    opacity: .22;
+  }
+  .hand {
+    width: 6px;
+    background: #fff;
+    border-radius: 3px 3px 0 0;
+  }
+  /* gradiente overlay */
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(13,39,64,.92) 0%, rgba(13,39,64,.45) 50%, rgba(13,39,64,.1) 100%);
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 24px 60px;
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .hero-tag {
+    display: inline-block;
+    background: var(--amber);
+    color: #fff;
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 3px;
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    color: #fff;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .hero h1 em { color: var(--amber); font-style: normal; }
+  .hero-sub {
+    color: rgba(255,255,255,.8);
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 540px;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    max-width: 760px;
+    margin: 56px auto;
+    padding: 0 24px;
+    text-align: center;
+  }
+  .intro p {
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+  .intro strong { color: var(--ink); }
+
+  /* ── GRUPOS ── */
+  .groups { max-width: 1080px; margin: 0 auto 80px; padding: 0 24px; }
+
+  .group { margin-bottom: 56px; }
+  .group-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid var(--line);
+  }
+  .group-tag {
+    background: var(--navy);
+    color: #fff;
+    font-size: .65rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 9px;
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+  .group-header h2 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .group-header p {
+    font-size: .8rem;
+    color: var(--muted);
+    font-weight: 400;
+    margin-top: 1px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+  }
+
+  /* card publicado */
+  .card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 20px 20px 16px;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: border-color .2s, box-shadow .2s, transform .15s;
+    cursor: pointer;
+  }
+  .card:hover {
+    border-color: var(--navy2);
+    box-shadow: 0 4px 16px rgba(13,39,64,.1);
+    transform: translateY(-2px);
+  }
+  .card-label {
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--amber);
+  }
+  .card h3 {
+    font-size: .92rem;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.4;
+  }
+  .card p {
+    font-size: .8rem;
+    color: var(--muted);
+    line-height: 1.55;
+    flex: 1;
+  }
+  .card .cta {
+    font-size: .78rem;
+    font-weight: 600;
+    color: var(--navy2);
+    margin-top: 4px;
+  }
+
+  /* card pendente */
+  .card.pending {
+    background: var(--bg);
+    border-color: transparent;
+    cursor: default;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+  .card.pending:hover { border-color: transparent; }
+  .card.pending h3 { color: var(--muted); }
+  .card.pending .card-label { color: #bac3cb; }
+  .card.pending .badge {
+    display: inline-block;
+    background: #e8ecef;
+    color: #8a9aa8;
+    font-size: .62rem;
+    font-weight: 700;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 20px;
+    width: fit-content;
+  }
+
+  /* ── CTA BOTTOM ── */
+  .bottom-cta {
+    background: var(--navy);
+    padding: 56px 24px;
+    text-align: center;
+  }
+  .bottom-cta h2 {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .bottom-cta p { color: rgba(255,255,255,.7); font-size: .95rem; margin-bottom: 28px; }
+  .btn-wa {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #25d366;
+    color: #fff;
+    font-size: .9rem;
+    font-weight: 700;
+    padding: 14px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+  }
+
+  @media (max-width: 600px) {
+    .hero { min-height: 420px; }
+    .cards { grid-template-columns: 1fr; }
+    nav { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">Steel<span>Framing</span>.com.br</div>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/duvidas/">Dúvidas</a>
+    <a href="/sobre/">Sobre</a>
+    <a href="https://wa.me/5512991856900">Contato</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+  <!-- PLACEHOLDER — substituir por <img> real -->
+  <div class="hero-img-placeholder">
+    <div class="concept-note">
+      📷 Imagem: palestra sobre Steel Framing<br>
+      Vista do fundo da sala para o palco.<br>
+      Palestrante pergunta: "Quem tem dúvidas?"<br>
+      Todos os participantes com mão levantada.
+    </div>
+    <!-- silhuetas decorativas de pessoas com mão levantada -->
+    <div class="hands">
+      <div class="hand" style="height:140px"></div>
+      <div class="hand" style="height:55px"></div>
+      <div class="hand" style="height:160px"></div>
+      <div class="hand" style="height:48px"></div>
+      <div class="hand" style="height:145px"></div>
+      <div class="hand" style="height:60px"></div>
+      <div class="hand" style="height:155px"></div>
+      <div class="hand" style="height:52px"></div>
+      <div class="hand" style="height:138px"></div>
+      <div class="hand" style="height:65px"></div>
+      <div class="hand" style="height:150px"></div>
+      <div class="hand" style="height:44px"></div>
+      <div class="hand" style="height:162px"></div>
+      <div class="hand" style="height:58px"></div>
+      <div class="hand" style="height:142px"></div>
+    </div>
+  </div>
+
+  <div class="hero-content">
+    <span class="hero-tag">Central de Dúvidas</span>
+    <h1>Tudo o que você quer saber sobre <em>Steel Framing</em></h1>
+    <p class="hero-sub">Respostas técnicas, com base normativa — sem promessas de vendedor. Cada página vai direto ao ponto que você realmente precisa entender antes de construir.</p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+  <p>O Steel Framing ainda gera <strong>muitas dúvidas no Brasil</strong> — boa parte delas alimentadas por comparações rasas ou marketing exagerado. Aqui você encontra respostas com embasamento técnico real, organizadas pelo momento da sua decisão.</p>
+</section>
+
+<!-- GRUPOS -->
+<div class="groups">
+
+  <!-- GRUPO A -->
+  <div class="group">
+    <div class="group-header">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px">
+          <span class="group-tag">Grupo A</span>
+          <h2>Confiança no sistema</h2>
+        </div>
+        <p>As dúvidas que impedem alguém de sequer considerar o Steel Framing</p>
+      </div>
+    </div>
+    <div class="cards">
+      <a class="card" href="/steel-framing/enferruja/">
+        <span class="card-label">Publicado</span>
+        <h3>Os perfis de Steel Framing enferrujam?</h3>
+        <p>Galvanização, categorias de corrosividade e o que o projeto precisa garantir para que o aço dure décadas.</p>
+        <span class="cta">Ler artigo →</span>
+      </a>
+      <a class="card" href="/steel-framing/pega-fogo/">
+        <span class="card-label">Publicado</span>
+        <h3>Steel Framing pega fogo?</h3>
+        <p>Como o sistema performa em incêndio, o papel das vedações e o que diz a norma de desempenho.</p>
+        <span class="cta">Ler artigo →</span>
+      </a>
+      <a class="card" href="/steel-framing/quanto-tempo-dura/">
+        <span class="card-label">Publicado</span>
+        <h3>Quantos anos dura uma casa em Steel Framing?</h3>
+        <p>Vida útil de projeto segundo a NBR 15575 — e o que realmente determina se a estrutura vai durar 50 ou 100 anos.</p>
+        <span class="cta">Ler artigo →</span>
+      </a>
+      <a class="card" href="/steel-framing/aguenta-vento-forte/">
+        <span class="card-label">Publicado</span>
+        <h3>Steel Framing aguenta vento forte?</h3>
+        <p>Contraventamento em X, ancoragens e o caminho estrutural que transfere a carga do vento até a fundação.</p>
+        <span class="cta">Ler artigo →</span>
+      </a>
+      <div class="card pending">
+        <span class="card-label">Em breve</span>
+        <h3>Pode usar Steel Framing no litoral?</h3>
+        <span class="badge">Em breve</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GRUPO B -->
+  <div class="group">
+    <div class="group-header">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px">
+          <span class="group-tag">Grupo B</span>
+          <h2>Conforto no dia a dia</h2>
+        </div>
+        <p>Quem já superou a desconfiança quer saber como vai ser morar na casa</p>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card pending">
+        <span class="card-label">Em breve</span>
+        <h3>Steel Framing faz barulho? O isolamento acústico é bom?</h3>
+        <span class="badge">Em breve</span>
+      </div>
+      <div class="card pending">
+        <span class="card-label">Em breve</span>
+        <h3>Casa de Steel Framing é quente no verão?</h3>
+        <span class="badge">Em breve</span>
+      </div>
+      <div class="card pending">
+        <span class="card-label">Em breve</span>
+        <h3>Steel Framing dá cupim?</h3>
+        <span class="badge">Em breve</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GRUPO C -->
+  <div class="group">
+    <div class="group-header">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px">
+          <span class="group-tag">Grupo C</span>
+          <h2>Custos e viabilidade</h2>
+        </div>
+        <p>Quem chegou até aqui já quer construir — precisa saber quanto vai gastar</p>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card pending">
+        <span class="card-label">Em breve</span>
+        <h3>Quanto custa construir em Steel Framing por m²?</h3>
+        <span class="badge">Em breve</span>
+      </div>
+      <div class="card pending">
+        <span class="card-label">Em breve</span>
+        <h3>Vale a pena construir em Steel Framing?</h3>
+        <span class="badge">Em breve</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GRUPO D -->
+  <div class="group">
+    <div class="group-header">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px">
+          <span class="group-tag">Grupo D</span>
+          <h2>Uso cotidiano</h2>
+        </div>
+        <p>Dúvidas concretas de quem já decidiu construir</p>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card pending">
+        <span class="card-label">Em breve</span>
+        <h3>Posso pendurar TV e objetos pesados na parede?</h3>
+        <span class="badge">Em breve</span>
+      </div>
+      <div class="card pending">
+        <span class="card-label">Em breve</span>
+        <h3>Reformar uma casa em Steel Framing é mais difícil?</h3>
+        <span class="badge">Em breve</span>
+      </div>
+      <div class="card pending">
+        <span class="card-label">Em breve</span>
+        <h3>Posso remover ou abrir uma parede?</h3>
+        <span class="badge">Em breve</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GRUPO E -->
+  <div class="group">
+    <div class="group-header">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px">
+          <span class="group-tag">Grupo E</span>
+          <h2>Processo e obra</h2>
+        </div>
+        <p>Da fundação à entrega — o que muda na prática</p>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card pending">
+        <span class="card-label">Em breve</span>
+        <h3>Steel Framing é realmente mais rápido que a alvenaria?</h3>
+        <span class="badge">Em breve</span>
+      </div>
+      <div class="card pending">
+        <span class="card-label">Em breve</span>
+        <h3>Steel Framing sempre usa fundação radier?</h3>
+        <span class="badge">Em breve</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GRUPO F -->
+  <div class="group">
+    <div class="group-header">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px">
+          <span class="group-tag">Grupo F</span>
+          <h2>Normas, financiamento e sustentabilidade</h2>
+        </div>
+        <p>O contexto regulatório e financeiro da construção em aço leve</p>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card pending">
+        <span class="card-label">Em breve</span>
+        <h3>A Caixa Econômica financia Steel Framing?</h3>
+        <span class="badge">Em breve</span>
+      </div>
+      <div class="card pending">
+        <span class="card-label">Em breve</span>
+        <h3>Quais são as normas brasileiras para Steel Framing?</h3>
+        <span class="badge">Em breve</span>
+      </div>
+      <div class="card pending">
+        <span class="card-label">Em breve</span>
+        <h3>Light Steel Framing é mais sustentável que a alvenaria?</h3>
+        <span class="badge">Em breve</span>
+      </div>
+      <div class="card pending">
+        <span class="card-label">Em breve</span>
+        <h3>Quantos pavimentos podem ser construídos em Steel Framing?</h3>
+        <span class="badge">Em breve</span>
+      </div>
+      <div class="card pending">
+        <span class="card-label">Em breve</span>
+        <h3>Steel Framing dá trinca?</h3>
+        <span class="badge">Em breve</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- CTA -->
+<section class="bottom-cta">
+  <h2>Sua pergunta não está aqui?</h2>
+  <p>Fala direto comigo no WhatsApp — respondo com base técnica real, sem enrolação.</p>
+  <a class="btn-wa" href="https://wa.me/5512991856900?text=Ol%C3%A1%21%20Vim%20pelo%20site%20steelframing.com.br...">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Falar no WhatsApp
+  </a>
+</section>
+
+</body>
+</html>
