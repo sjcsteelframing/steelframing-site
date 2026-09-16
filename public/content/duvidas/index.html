@@ -59,11 +59,11 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: 'Poppins', 'Segoe UI', sans-serif; background: var(--bg); color: var(--ink); }
 
-/* ── HERO — imagem limpa, sem texto sobreposto ── */
+/* ── HERO com texto sobreposto ── */
 .page-hero {
   width: 100%;
+  position: relative;
   overflow: hidden;
-  display: block;
   background: var(--navy);
   line-height: 0;
 }
@@ -74,14 +74,18 @@ body { font-family: 'Poppins', 'Segoe UI', sans-serif; background: var(--bg); co
   object-fit: cover;
   object-position: center 30%;
 }
-
-/* ── GANCHO ── */
-.gancho {
-  background: var(--navy);
-  padding: 44px 24px 48px;
-  text-align: center;
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10,25,46,.85) 0%, rgba(10,25,46,.45) 50%, rgba(10,25,46,.1) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: clamp(24px, 5vw, 56px);
 }
-.gancho-tag {
+.hero-content {
+  max-width: 760px;
+}
+.hero-eyebrow {
   display: inline-block;
   background: var(--amber);
   color: #fff;
@@ -91,25 +95,32 @@ body { font-family: 'Poppins', 'Segoe UI', sans-serif; background: var(--bg); co
   text-transform: uppercase;
   padding: 3px 10px;
   border-radius: 3px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
-.gancho p {
+.hero-content h1 {
   color: #fff;
-  font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  letter-spacing: -.02em;
+}
+.hero-lead {
+  color: rgba(255,255,255,.88);
+  font-size: clamp(.95rem, 2.2vw, 1.2rem);
   font-weight: 300;
   line-height: 1.55;
-  max-width: 720px;
-  margin: 0 auto;
+  max-width: 640px;
   letter-spacing: -.01em;
 }
-.gancho p strong {
-  font-weight: 600;
-  color: #fff;
-}
-.gancho p em {
+.hero-lead em {
   font-style: normal;
   color: var(--amber);
   font-weight: 500;
+}
+.hero-lead strong {
+  font-weight: 600;
+  color: #fff;
 }
 
 /* ── BREADCRUMB ── */
@@ -253,8 +264,60 @@ body { font-family: 'Poppins', 'Segoe UI', sans-serif; background: var(--bg); co
   padding: 64px 24px;
   text-align: center;
 }
-.bottom-cta h2 { color: #fff; font-size: clamp(1.2rem, 3vw, 1.5rem); font-weight: 700; margin-bottom: 12px; }
-.bottom-cta p { color: rgba(255,255,255,.7); font-size: .95rem; margin-bottom: 28px; max-width: 540px; margin-left: auto; margin-right: auto; }
+.cta-inner { max-width: 560px; margin: 0 auto; }
+.bottom-cta h2 { color: #fff; font-size: clamp(1.2rem, 3vw, 1.5rem); font-weight: 700; margin-bottom: 10px; }
+.bottom-cta > .cta-inner > p { color: rgba(255,255,255,.7); font-size: .95rem; margin-bottom: 28px; }
+
+.cta-form { display: flex; flex-direction: column; gap: 12px; text-align: left; }
+.cta-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.cta-form input, .cta-form textarea {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 6px;
+  color: #fff;
+  font-family: inherit;
+  font-size: .88rem;
+  padding: 11px 14px;
+  width: 100%;
+  transition: border-color .2s;
+}
+.cta-form input::placeholder, .cta-form textarea::placeholder { color: rgba(255,255,255,.4); }
+.cta-form input:focus, .cta-form textarea:focus { outline: none; border-color: var(--amber); }
+.cta-form textarea { resize: vertical; min-height: 96px; }
+.btn-enviar {
+  background: var(--amber);
+  color: #fff;
+  font-family: inherit;
+  font-size: .9rem;
+  font-weight: 700;
+  padding: 13px 28px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: opacity .2s;
+  align-self: flex-start;
+}
+.btn-enviar:hover { opacity: .88; }
+.btn-enviar:disabled { opacity: .5; cursor: not-allowed; }
+.cta-form-feedback { font-size: .85rem; min-height: 1.2em; color: var(--amber); }
+
+.cta-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 28px 0;
+  color: rgba(255,255,255,.35);
+  font-size: .78rem;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+.cta-divider::before, .cta-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(255,255,255,.15);
+}
+
 .btn-wa {
   display: inline-flex;
   align-items: center;
@@ -263,12 +326,17 @@ body { font-family: 'Poppins', 'Segoe UI', sans-serif; background: var(--bg); co
   color: #fff;
   font-size: .9rem;
   font-weight: 700;
-  padding: 14px 28px;
+  padding: 14px 24px;
   border-radius: 6px;
   text-decoration: none;
   transition: opacity .2s;
 }
 .btn-wa:hover { opacity: .9; }
+
+@media (max-width: 500px) {
+  .cta-form-row { grid-template-columns: 1fr; }
+  .btn-enviar { width: 100%; }
+}
 
 /* ── SCROLL REVEAL ── */
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity .5s ease, transform .5s ease; }
@@ -276,9 +344,10 @@ body { font-family: 'Poppins', 'Segoe UI', sans-serif; background: var(--bg); co
 
 /* ── MOBILE ── */
 @media (max-width: 600px) {
-  .page-hero img { max-height: 260px; object-fit: cover; }
-  .gancho p { font-size: 1.05rem; }
-  .gancho { padding: 32px 20px 36px; }
+  .page-hero img { max-height: 320px; object-fit: cover; }
+  .hero-overlay { padding: 20px; }
+  .hero-content h1 { font-size: 1.4rem; }
+  .hero-lead { font-size: .88rem; }
   .intro { margin: 40px auto; }
   .cards, .coming-cards { grid-template-columns: 1fr; }
 }
@@ -308,18 +377,19 @@ body { font-family: 'Poppins', 'Segoe UI', sans-serif; background: var(--bg); co
   </div>
 </header>
 
-<!-- HERO — imagem limpa, sem texto sobreposto -->
+<!-- HERO com texto sobreposto -->
 <div class="page-hero">
   <img src="/images/steel-framing/duvidas/hero-duvidas-steel-framing.png"
        alt="Plateia de palestra com todos os participantes com a mão levantada — o palestrante iluminado no palco ao fundo perguntou quem tem dúvidas sobre Steel Framing"
        loading="eager"
        width="1782" height="883"/>
-</div>
-
-<!-- GANCHO — texto que narra a imagem -->
-<div class="gancho">
-  <span class="gancho-tag">Central de Dúvidas</span>
-  <p>Quando perguntamos quem tem dúvidas sobre <em>Steel Framing</em>, todos levantam a mão —<br class="br-desktop"/>mas muitas delas são <strong>as mesmas</strong>.</p>
+  <div class="hero-overlay">
+    <div class="hero-content">
+      <span class="hero-eyebrow">Central de Dúvidas</span>
+      <h1>Dúvidas sobre<br/>Steel Framing</h1>
+      <p class="hero-lead">Quando perguntamos quem tem dúvidas sobre <em>Steel Framing</em>, todos levantam a mão —<br/>mas muitas delas são <strong>as mesmas</strong>.</p>
+    </div>
+  </div>
 </div>
 
 <!-- BREADCRUMB -->
@@ -372,6 +442,12 @@ body { font-family: 'Poppins', 'Segoe UI', sans-serif; background: var(--bg); co
         <h3>Steel Framing aguenta vento forte?</h3>
         <p>Contraventamento em X, ancoragens e o caminho estrutural que transfere a carga do vento até a fundação.</p>
         <span class="cta">Ler artigo →</span>
+      </a>
+      <a class="card" href="/mercado-de-investimento/financiamento-imovel-steel-framing/">
+        <span class="card-label">Leitura relacionada</span>
+        <h3>Construí em Steel Framing — consigo vender minha casa financiada?</h3>
+        <p>Como a avaliação bancária trata imóveis em Steel Framing e o que é preciso garantir para não ter problemas na revenda.</p>
+        <span class="cta">Ler mais →</span>
       </a>
     </div>
   </div>
@@ -449,12 +525,26 @@ body { font-family: 'Poppins', 'Segoe UI', sans-serif; background: var(--bg); co
 
 <!-- CTA FINAL -->
 <section class="bottom-cta">
-  <h2>Sua dúvida não está aqui?</h2>
-  <p>Fala direto comigo no WhatsApp — respondo com base técnica real, sem enrolação.</p>
-  <a class="btn-wa" href="https://wa.me/5512991856900?text=Ol%C3%A1%21%20Vim%20pelo%20site%20steelframing.com.br%20e%20tenho%20uma%20d%C3%BAvida%20sobre%20Steel%20Framing." target="_blank" rel="noopener">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    Falar no WhatsApp
-  </a>
+  <div class="cta-inner">
+    <h2>Sua dúvida não está aqui?</h2>
+    <p>Nos envie sua dúvida — teremos muito prazer em esclarecer.</p>
+    <form class="cta-form" id="cta-contact-form">
+      <div class="cta-form-row">
+        <input type="text" name="nome" placeholder="Seu nome" required autocomplete="name"/>
+        <input type="email" name="email" placeholder="Seu e-mail" required autocomplete="email"/>
+      </div>
+      <textarea name="mensagem" placeholder="Qual é sua dúvida?" rows="4" required></textarea>
+      <button type="submit" class="btn-enviar">Enviar dúvida</button>
+      <div class="cta-form-feedback" id="cta-form-feedback" aria-live="polite"></div>
+    </form>
+    <div class="cta-divider">
+      <span>ou se preferir</span>
+    </div>
+    <a class="btn-wa" href="https://wa.me/5512991856900?text=Ol%C3%A1%21%20Vim%20pelo%20site%20steelframing.com.br%20e%20tenho%20uma%20d%C3%BAvida%20sobre%20Steel%20Framing." target="_blank" rel="noopener">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Nos envie uma mensagem pelo WhatsApp
+    </a>
+  </div>
 </section>
 
 <footer class="site-footer">
@@ -539,6 +629,46 @@ body { font-family: 'Poppins', 'Segoe UI', sans-serif; background: var(--bg); co
       if(typeof gtag !== 'undefined'){
         gtag('event', 'whatsapp_click', { page: window.location.pathname });
       }
+    });
+  });
+})();
+</script>
+
+<!-- Formulário de contato CTA -->
+<script>
+(function(){
+  var form = document.getElementById('cta-contact-form');
+  var feedback = document.getElementById('cta-form-feedback');
+  if (!form) return;
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var btn = form.querySelector('.btn-enviar');
+    btn.disabled = true; btn.textContent = 'Enviando…';
+    feedback.textContent = '';
+    var data = {
+      nome: form.querySelector('[name="nome"]').value,
+      email: form.querySelector('[name="email"]').value,
+      mensagem: form.querySelector('[name="mensagem"]').value,
+      origem: '/duvidas/'
+    };
+    fetch('/api/contact', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {'Content-Type': 'application/json'}
+    })
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      if (d.ok) {
+        form.innerHTML = '<p style="color:var(--amber);font-weight:700;font-size:1rem;text-align:center;padding:24px 0">✓ Dúvida enviada! Entraremos em contato em breve.</p>';
+        if (typeof gtag !== 'undefined') gtag('event', 'contact_form_sent', { page: '/duvidas/' });
+      } else {
+        feedback.textContent = 'Não conseguimos enviar. Tente pelo WhatsApp.';
+        btn.disabled = false; btn.textContent = 'Enviar dúvida';
+      }
+    })
+    .catch(function(){
+      feedback.textContent = 'Não conseguimos enviar. Tente pelo WhatsApp.';
+      btn.disabled = false; btn.textContent = 'Enviar dúvida';
     });
   });
 })();
