@@ -385,7 +385,8 @@ body { font-family: 'Poppins', 'Segoe UI', sans-serif; background: var(--bg); co
 
 /* ── MOBILE ── */
 @media (max-width: 600px) {
-  .page-hero img { max-height: 320px; object-fit: cover; }
+  .page-hero { min-height: 620px; }
+  .hero-content { width: calc(100% - 40px); }
   .hero-overlay { padding: 20px; }
   .hero-content h1 { font-size: clamp(2rem, 9vw, 2.6rem); }
   .hero-actions { flex-direction: column; }
