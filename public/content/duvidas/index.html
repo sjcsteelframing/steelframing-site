@@ -69,10 +69,17 @@ body { font-family: 'Poppins', 'Segoe UI', sans-serif; background: var(--bg); co
   overflow: hidden;
   background: var(--navy);
 }
-.page-hero img {
+.page-hero picture {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+}
+.page-hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center 30%;
 }
