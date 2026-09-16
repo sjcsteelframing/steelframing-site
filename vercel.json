@@ -1,197 +1,442 @@
 {
   "redirects": [
-    { "source": "/:path*/index.html", "destination": "/:path*/", "permanent": true },
-
-    { "source": "/content/index.html", "destination": "/", "permanent": true },
-    { "source": "/content",  "destination": "/", "permanent": true },
-    { "source": "/content/", "destination": "/", "permanent": true },
-
-    { "source": "/content/contato",  "destination": "/contato/", "permanent": true },
-    { "source": "/content/contato/", "destination": "/contato/", "permanent": true },
-
-    { "source": "/content/sobre",        "destination": "/sobre/",       "permanent": true },
-    { "source": "/content/sobre/",       "destination": "/sobre/",       "permanent": true },
-    { "source": "/content/sobre/:path*", "destination": "/sobre/:path*", "permanent": true },
-
-    { "source": "/content/o-que-e-steel-framing",
-      "destination": "/steel-framing/o-que-e-light-steel-framing/", "permanent": true },
-    { "source": "/content/o-que-e-steel-framing/",
-      "destination": "/steel-framing/o-que-e-light-steel-framing/", "permanent": true },
-    { "source": "/content/o-que-e-steel-framing/:path*",
-      "destination": "/steel-framing/o-que-e-light-steel-framing/:path*", "permanent": true },
-
-    { "source": "/content/steelframing-vs-alvenaria",
-      "destination": "/steel-framing-x-alvenaria/", "permanent": true },
-    { "source": "/content/steelframing-vs-alvenaria/",
-      "destination": "/steel-framing-x-alvenaria/", "permanent": true },
-    { "source": "/content/steelframing-vs-alvenaria/:path*",
-      "destination": "/steel-framing-x-alvenaria/:path*", "permanent": true },
-
-    { "source": "/content/mercado-de-investimento/airbnb",
-      "destination": "/mercado-de-investimento/airbnb-e-aluguel/", "permanent": true },
-    { "source": "/content/mercado-de-investimento/airbnb/",
-      "destination": "/mercado-de-investimento/airbnb-e-aluguel/", "permanent": true },
-    { "source": "/content/mercado-de-investimento/airbnb/:path*",
-      "destination": "/mercado-de-investimento/airbnb-e-aluguel/:path*", "permanent": true },
-
-    { "source": "/content/mercado-de-investimento/financiamento-imovel-steel-framing",
-      "destination": "/mercado-de-investimento/financiamento-steel-framing/", "permanent": true },
-    { "source": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/",
-      "destination": "/mercado-de-investimento/financiamento-steel-framing/", "permanent": true },
-    { "source": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/:path*",
-      "destination": "/mercado-de-investimento/financiamento-steel-framing/:path*", "permanent": true },
-
-    { "source": "/mercado-de-investimento/airbnb-e-aluguel/p1.html", "destination": "/mercado-de-investimento/airbnb-e-aluguel/prazo-e-escala/", "permanent": true },
-    { "source": "/mercado-de-investimento/airbnb-e-aluguel/p2.html", "destination": "/mercado-de-investimento/airbnb-e-aluguel/produto-e-conforto/", "permanent": true },
-    { "source": "/mercado-de-investimento/airbnb-e-aluguel/p3.html", "destination": "/mercado-de-investimento/airbnb-e-aluguel/operacao-e-manutencao/", "permanent": true },
-    { "source": "/mercado-de-investimento/airbnb-e-aluguel/p4.html", "destination": "/mercado-de-investimento/airbnb-e-aluguel/viabilidade-economica/", "permanent": true },
-
-    { "source": "/mercado-de-investimento",  "destination": "/mercado-de-investimento/airbnb-e-aluguel/", "permanent": true },
-    { "source": "/mercado-de-investimento/", "destination": "/mercado-de-investimento/airbnb-e-aluguel/", "permanent": true },
-    { "source": "/content/steel-framing/enferruja",  "destination": "/steel-framing/enferruja/", "permanent": true },
-    { "source": "/content/steel-framing/enferruja/", "destination": "/steel-framing/enferruja/", "permanent": true },
-
-    { "source": "/content/steel-framing/pega-fogo",  "destination": "/steel-framing/pega-fogo/", "permanent": true },
-    { "source": "/content/steel-framing/pega-fogo/", "destination": "/steel-framing/pega-fogo/", "permanent": true },
-
-    { "source": "/content/steel-framing/quanto-tempo-dura",  "destination": "/steel-framing/quanto-tempo-dura/", "permanent": true },
-    { "source": "/content/steel-framing/quanto-tempo-dura/", "destination": "/steel-framing/quanto-tempo-dura/", "permanent": true },
-
-    { "source": "/content/steel-framing/aguenta-vento-forte",  "destination": "/steel-framing/aguenta-vento-forte/", "permanent": true },
-    { "source": "/content/steel-framing/aguenta-vento-forte/", "destination": "/steel-framing/aguenta-vento-forte/", "permanent": true },
-
-    { "source": "/steel-framing",  "destination": "/steel-framing/o-que-e-light-steel-framing/", "permanent": true },
-    { "source": "/steel-framing/", "destination": "/steel-framing/o-que-e-light-steel-framing/", "permanent": true },
-    { "source": "/steel-framing-x-alvenaria", "destination": "/steel-framing-x-alvenaria/", "permanent": true }
+    {
+      "source": "/content/duvidas",
+      "destination": "/duvidas/",
+      "permanent": true
+    },
+    {
+      "source": "/content/duvidas/",
+      "destination": "/duvidas/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*/index.html",
+      "destination": "/:path*/",
+      "permanent": true
+    },
+    {
+      "source": "/content/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/content",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/content/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/content/contato",
+      "destination": "/contato/",
+      "permanent": true
+    },
+    {
+      "source": "/content/contato/",
+      "destination": "/contato/",
+      "permanent": true
+    },
+    {
+      "source": "/content/sobre",
+      "destination": "/sobre/",
+      "permanent": true
+    },
+    {
+      "source": "/content/sobre/",
+      "destination": "/sobre/",
+      "permanent": true
+    },
+    {
+      "source": "/content/sobre/:path*",
+      "destination": "/sobre/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/content/o-que-e-steel-framing",
+      "destination": "/steel-framing/o-que-e-light-steel-framing/",
+      "permanent": true
+    },
+    {
+      "source": "/content/o-que-e-steel-framing/",
+      "destination": "/steel-framing/o-que-e-light-steel-framing/",
+      "permanent": true
+    },
+    {
+      "source": "/content/o-que-e-steel-framing/:path*",
+      "destination": "/steel-framing/o-que-e-light-steel-framing/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/content/steelframing-vs-alvenaria",
+      "destination": "/steel-framing-x-alvenaria/",
+      "permanent": true
+    },
+    {
+      "source": "/content/steelframing-vs-alvenaria/",
+      "destination": "/steel-framing-x-alvenaria/",
+      "permanent": true
+    },
+    {
+      "source": "/content/steelframing-vs-alvenaria/:path*",
+      "destination": "/steel-framing-x-alvenaria/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/content/mercado-de-investimento/airbnb",
+      "destination": "/mercado-de-investimento/airbnb-e-aluguel/",
+      "permanent": true
+    },
+    {
+      "source": "/content/mercado-de-investimento/airbnb/",
+      "destination": "/mercado-de-investimento/airbnb-e-aluguel/",
+      "permanent": true
+    },
+    {
+      "source": "/content/mercado-de-investimento/airbnb/:path*",
+      "destination": "/mercado-de-investimento/airbnb-e-aluguel/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/content/mercado-de-investimento/financiamento-imovel-steel-framing",
+      "destination": "/mercado-de-investimento/financiamento-steel-framing/",
+      "permanent": true
+    },
+    {
+      "source": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/",
+      "destination": "/mercado-de-investimento/financiamento-steel-framing/",
+      "permanent": true
+    },
+    {
+      "source": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/:path*",
+      "destination": "/mercado-de-investimento/financiamento-steel-framing/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/mercado-de-investimento/airbnb-e-aluguel/p1.html",
+      "destination": "/mercado-de-investimento/airbnb-e-aluguel/prazo-e-escala/",
+      "permanent": true
+    },
+    {
+      "source": "/mercado-de-investimento/airbnb-e-aluguel/p2.html",
+      "destination": "/mercado-de-investimento/airbnb-e-aluguel/produto-e-conforto/",
+      "permanent": true
+    },
+    {
+      "source": "/mercado-de-investimento/airbnb-e-aluguel/p3.html",
+      "destination": "/mercado-de-investimento/airbnb-e-aluguel/operacao-e-manutencao/",
+      "permanent": true
+    },
+    {
+      "source": "/mercado-de-investimento/airbnb-e-aluguel/p4.html",
+      "destination": "/mercado-de-investimento/airbnb-e-aluguel/viabilidade-economica/",
+      "permanent": true
+    },
+    {
+      "source": "/mercado-de-investimento",
+      "destination": "/mercado-de-investimento/airbnb-e-aluguel/",
+      "permanent": true
+    },
+    {
+      "source": "/mercado-de-investimento/",
+      "destination": "/mercado-de-investimento/airbnb-e-aluguel/",
+      "permanent": true
+    },
+    {
+      "source": "/content/steel-framing/enferruja",
+      "destination": "/steel-framing/enferruja/",
+      "permanent": true
+    },
+    {
+      "source": "/content/steel-framing/enferruja/",
+      "destination": "/steel-framing/enferruja/",
+      "permanent": true
+    },
+    {
+      "source": "/content/steel-framing/pega-fogo",
+      "destination": "/steel-framing/pega-fogo/",
+      "permanent": true
+    },
+    {
+      "source": "/content/steel-framing/pega-fogo/",
+      "destination": "/steel-framing/pega-fogo/",
+      "permanent": true
+    },
+    {
+      "source": "/content/steel-framing/quanto-tempo-dura",
+      "destination": "/steel-framing/quanto-tempo-dura/",
+      "permanent": true
+    },
+    {
+      "source": "/content/steel-framing/quanto-tempo-dura/",
+      "destination": "/steel-framing/quanto-tempo-dura/",
+      "permanent": true
+    },
+    {
+      "source": "/content/steel-framing/aguenta-vento-forte",
+      "destination": "/steel-framing/aguenta-vento-forte/",
+      "permanent": true
+    },
+    {
+      "source": "/content/steel-framing/aguenta-vento-forte/",
+      "destination": "/steel-framing/aguenta-vento-forte/",
+      "permanent": true
+    },
+    {
+      "source": "/steel-framing",
+      "destination": "/steel-framing/o-que-e-light-steel-framing/",
+      "permanent": true
+    },
+    {
+      "source": "/steel-framing/",
+      "destination": "/steel-framing/o-que-e-light-steel-framing/",
+      "permanent": true
+    },
+    {
+      "source": "/steel-framing-x-alvenaria",
+      "destination": "/steel-framing-x-alvenaria/",
+      "permanent": true
+    }
   ],
   "rewrites": [
-    { "source": "/busca",  "destination": "/busca/index.html" },
-    { "source": "/busca/", "destination": "/busca/index.html" },
-
-    { "source": "/contato",  "destination": "/content/contato/index.html" },
-    { "source": "/contato/", "destination": "/content/contato/index.html" },
-
-    { "source": "/", "destination": "/content/index.html" },
-
-    { "source": "/sobre",        "destination": "/content/sobre/index.html" },
-    { "source": "/sobre/",       "destination": "/content/sobre/index.html" },
-    { "source": "/sobre/:path*", "destination": "/content/sobre/:path*" },
-
-    { "source": "/steel-framing/o-que-e-light-steel-framing",
-      "destination": "/content/o-que-e-steel-framing/index.html" },
-    { "source": "/steel-framing/o-que-e-light-steel-framing/",
-      "destination": "/content/o-que-e-steel-framing/index.html" },
-
-    { "source": "/steel-framing/o-que-e-light-steel-framing/como-funciona",
-      "destination": "/content/o-que-e-steel-framing/como-funciona/index.html" },
-    { "source": "/steel-framing/o-que-e-light-steel-framing/como-funciona/",
-      "destination": "/content/o-que-e-steel-framing/como-funciona/index.html" },
-
-    { "source": "/steel-framing/o-que-e-light-steel-framing/desempenho-e-durabilidade",
-      "destination": "/content/o-que-e-steel-framing/desempenho-e-durabilidade/index.html" },
-    { "source": "/steel-framing/o-que-e-light-steel-framing/desempenho-e-durabilidade/",
-      "destination": "/content/o-que-e-steel-framing/desempenho-e-durabilidade/index.html" },
-
-    { "source": "/steel-framing/o-que-e-light-steel-framing/projeto-e-industrializacao",
-      "destination": "/content/o-que-e-steel-framing/projeto-e-industrializacao/index.html" },
-    { "source": "/steel-framing/o-que-e-light-steel-framing/projeto-e-industrializacao/",
-      "destination": "/content/o-que-e-steel-framing/projeto-e-industrializacao/index.html" },
-
-    { "source": "/steel-framing/enferruja",  "destination": "/content/steel-framing/enferruja/index.html" },
-    { "source": "/steel-framing/enferruja/", "destination": "/content/steel-framing/enferruja/index.html" },
-
-    { "source": "/steel-framing/pega-fogo",  "destination": "/content/steel-framing/pega-fogo/index.html" },
-    { "source": "/steel-framing/pega-fogo/", "destination": "/content/steel-framing/pega-fogo/index.html" },
-
-    { "source": "/steel-framing/quanto-tempo-dura",  "destination": "/content/steel-framing/quanto-tempo-dura/index.html" },
-    { "source": "/steel-framing/quanto-tempo-dura/", "destination": "/content/steel-framing/quanto-tempo-dura/index.html" },
-
-    { "source": "/steel-framing/aguenta-vento-forte",  "destination": "/content/steel-framing/aguenta-vento-forte/index.html" },
-    { "source": "/steel-framing/aguenta-vento-forte/", "destination": "/content/steel-framing/aguenta-vento-forte/index.html" },
-
-    { "source": "/steel-framing/o-que-e-light-steel-framing/:path*",
-      "destination": "/content/o-que-e-steel-framing/:path*" },
-
-    { "source": "/steel-framing-x-alvenaria/",
-      "destination": "/content/steelframing-vs-alvenaria/index.html" },
-
-    { "source": "/steel-framing-x-alvenaria/custo",
-      "destination": "/content/steelframing-vs-alvenaria/custo/index.html" },
-    { "source": "/steel-framing-x-alvenaria/custo/",
-      "destination": "/content/steelframing-vs-alvenaria/custo/index.html" },
-
-    { "source": "/steel-framing-x-alvenaria/desempenho",
-      "destination": "/content/steelframing-vs-alvenaria/desempenho/index.html" },
-    { "source": "/steel-framing-x-alvenaria/desempenho/",
-      "destination": "/content/steelframing-vs-alvenaria/desempenho/index.html" },
-
-    { "source": "/steel-framing-x-alvenaria/fundacoes",
-      "destination": "/content/steelframing-vs-alvenaria/fundacoes/index.html" },
-    { "source": "/steel-framing-x-alvenaria/fundacoes/",
-      "destination": "/content/steelframing-vs-alvenaria/fundacoes/index.html" },
-
-    { "source": "/steel-framing-x-alvenaria/mao-de-obra",
-      "destination": "/content/steelframing-vs-alvenaria/mao-de-obra/index.html" },
-    { "source": "/steel-framing-x-alvenaria/mao-de-obra/",
-      "destination": "/content/steelframing-vs-alvenaria/mao-de-obra/index.html" },
-
-    { "source": "/steel-framing-x-alvenaria/prazo",
-      "destination": "/content/steelframing-vs-alvenaria/prazo/index.html" },
-    { "source": "/steel-framing-x-alvenaria/prazo/",
-      "destination": "/content/steelframing-vs-alvenaria/prazo/index.html" },
-
-    { "source": "/steel-framing-x-alvenaria/:path*",
-      "destination": "/content/steelframing-vs-alvenaria/:path*" },
-
-    { "source": "/mercado-de-investimento/airbnb-e-aluguel",
-      "destination": "/content/mercado-de-investimento/airbnb/index.html" },
-    { "source": "/mercado-de-investimento/airbnb-e-aluguel/",
-      "destination": "/content/mercado-de-investimento/airbnb/index.html" },
-
-    { "source": "/mercado-de-investimento/airbnb-e-aluguel/prazo-e-escala",
-      "destination": "/content/mercado-de-investimento/airbnb/prazo-e-escala/index.html" },
-    { "source": "/mercado-de-investimento/airbnb-e-aluguel/prazo-e-escala/",
-      "destination": "/content/mercado-de-investimento/airbnb/prazo-e-escala/index.html" },
-
-    { "source": "/mercado-de-investimento/airbnb-e-aluguel/produto-e-conforto",
-      "destination": "/content/mercado-de-investimento/airbnb/produto-e-conforto/index.html" },
-    { "source": "/mercado-de-investimento/airbnb-e-aluguel/produto-e-conforto/",
-      "destination": "/content/mercado-de-investimento/airbnb/produto-e-conforto/index.html" },
-
-    { "source": "/mercado-de-investimento/airbnb-e-aluguel/operacao-e-manutencao",
-      "destination": "/content/mercado-de-investimento/airbnb/operacao-e-manutencao/index.html" },
-    { "source": "/mercado-de-investimento/airbnb-e-aluguel/operacao-e-manutencao/",
-      "destination": "/content/mercado-de-investimento/airbnb/operacao-e-manutencao/index.html" },
-
-    { "source": "/mercado-de-investimento/airbnb-e-aluguel/viabilidade-economica",
-      "destination": "/content/mercado-de-investimento/airbnb/viabilidade-economica/index.html" },
-    { "source": "/mercado-de-investimento/airbnb-e-aluguel/viabilidade-economica/",
-      "destination": "/content/mercado-de-investimento/airbnb/viabilidade-economica/index.html" },
-
-    { "source": "/mercado-de-investimento/airbnb-e-aluguel/:path*",
-      "destination": "/content/mercado-de-investimento/airbnb/:path*" },
-
-    { "source": "/mercado-de-investimento/financiamento-steel-framing",
-      "destination": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/index.html" },
-    { "source": "/mercado-de-investimento/financiamento-steel-framing/",
-      "destination": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/index.html" },
-
-    { "source": "/mercado-de-investimento/financiamento-steel-framing/avaliacao-bancaria",
-      "destination": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/avaliacao-bancaria/index.html" },
-    { "source": "/mercado-de-investimento/financiamento-steel-framing/avaliacao-bancaria/",
-      "destination": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/avaliacao-bancaria/index.html" },
-
-    { "source": "/mercado-de-investimento/financiamento-steel-framing/caixa",
-      "destination": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/caixa/index.html" },
-    { "source": "/mercado-de-investimento/financiamento-steel-framing/caixa/",
-      "destination": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/caixa/index.html" },
-
-    { "source": "/mercado-de-investimento/financiamento-steel-framing/capital-proprio-ou-financiamento",
-      "destination": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/capital-proprio-ou-financiamento/index.html" },
-    { "source": "/mercado-de-investimento/financiamento-steel-framing/capital-proprio-ou-financiamento/",
-      "destination": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/capital-proprio-ou-financiamento/index.html" },
-
-    { "source": "/mercado-de-investimento/financiamento-steel-framing/:path*",
-      "destination": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/:path*" }
+    {
+      "source": "/duvidas",
+      "destination": "/content/duvidas/index.html"
+    },
+    {
+      "source": "/duvidas/",
+      "destination": "/content/duvidas/index.html"
+    },
+    {
+      "source": "/busca",
+      "destination": "/busca/index.html"
+    },
+    {
+      "source": "/busca/",
+      "destination": "/busca/index.html"
+    },
+    {
+      "source": "/contato",
+      "destination": "/content/contato/index.html"
+    },
+    {
+      "source": "/contato/",
+      "destination": "/content/contato/index.html"
+    },
+    {
+      "source": "/",
+      "destination": "/content/index.html"
+    },
+    {
+      "source": "/sobre",
+      "destination": "/content/sobre/index.html"
+    },
+    {
+      "source": "/sobre/",
+      "destination": "/content/sobre/index.html"
+    },
+    {
+      "source": "/sobre/:path*",
+      "destination": "/content/sobre/:path*"
+    },
+    {
+      "source": "/steel-framing/o-que-e-light-steel-framing",
+      "destination": "/content/o-que-e-steel-framing/index.html"
+    },
+    {
+      "source": "/steel-framing/o-que-e-light-steel-framing/",
+      "destination": "/content/o-que-e-steel-framing/index.html"
+    },
+    {
+      "source": "/steel-framing/o-que-e-light-steel-framing/como-funciona",
+      "destination": "/content/o-que-e-steel-framing/como-funciona/index.html"
+    },
+    {
+      "source": "/steel-framing/o-que-e-light-steel-framing/como-funciona/",
+      "destination": "/content/o-que-e-steel-framing/como-funciona/index.html"
+    },
+    {
+      "source": "/steel-framing/o-que-e-light-steel-framing/desempenho-e-durabilidade",
+      "destination": "/content/o-que-e-steel-framing/desempenho-e-durabilidade/index.html"
+    },
+    {
+      "source": "/steel-framing/o-que-e-light-steel-framing/desempenho-e-durabilidade/",
+      "destination": "/content/o-que-e-steel-framing/desempenho-e-durabilidade/index.html"
+    },
+    {
+      "source": "/steel-framing/o-que-e-light-steel-framing/projeto-e-industrializacao",
+      "destination": "/content/o-que-e-steel-framing/projeto-e-industrializacao/index.html"
+    },
+    {
+      "source": "/steel-framing/o-que-e-light-steel-framing/projeto-e-industrializacao/",
+      "destination": "/content/o-que-e-steel-framing/projeto-e-industrializacao/index.html"
+    },
+    {
+      "source": "/steel-framing/enferruja",
+      "destination": "/content/steel-framing/enferruja/index.html"
+    },
+    {
+      "source": "/steel-framing/enferruja/",
+      "destination": "/content/steel-framing/enferruja/index.html"
+    },
+    {
+      "source": "/steel-framing/pega-fogo",
+      "destination": "/content/steel-framing/pega-fogo/index.html"
+    },
+    {
+      "source": "/steel-framing/pega-fogo/",
+      "destination": "/content/steel-framing/pega-fogo/index.html"
+    },
+    {
+      "source": "/steel-framing/quanto-tempo-dura",
+      "destination": "/content/steel-framing/quanto-tempo-dura/index.html"
+    },
+    {
+      "source": "/steel-framing/quanto-tempo-dura/",
+      "destination": "/content/steel-framing/quanto-tempo-dura/index.html"
+    },
+    {
+      "source": "/steel-framing/aguenta-vento-forte",
+      "destination": "/content/steel-framing/aguenta-vento-forte/index.html"
+    },
+    {
+      "source": "/steel-framing/aguenta-vento-forte/",
+      "destination": "/content/steel-framing/aguenta-vento-forte/index.html"
+    },
+    {
+      "source": "/steel-framing/o-que-e-light-steel-framing/:path*",
+      "destination": "/content/o-que-e-steel-framing/:path*"
+    },
+    {
+      "source": "/steel-framing-x-alvenaria/",
+      "destination": "/content/steelframing-vs-alvenaria/index.html"
+    },
+    {
+      "source": "/steel-framing-x-alvenaria/custo",
+      "destination": "/content/steelframing-vs-alvenaria/custo/index.html"
+    },
+    {
+      "source": "/steel-framing-x-alvenaria/custo/",
+      "destination": "/content/steelframing-vs-alvenaria/custo/index.html"
+    },
+    {
+      "source": "/steel-framing-x-alvenaria/desempenho",
+      "destination": "/content/steelframing-vs-alvenaria/desempenho/index.html"
+    },
+    {
+      "source": "/steel-framing-x-alvenaria/desempenho/",
+      "destination": "/content/steelframing-vs-alvenaria/desempenho/index.html"
+    },
+    {
+      "source": "/steel-framing-x-alvenaria/fundacoes",
+      "destination": "/content/steelframing-vs-alvenaria/fundacoes/index.html"
+    },
+    {
+      "source": "/steel-framing-x-alvenaria/fundacoes/",
+      "destination": "/content/steelframing-vs-alvenaria/fundacoes/index.html"
+    },
+    {
+      "source": "/steel-framing-x-alvenaria/mao-de-obra",
+      "destination": "/content/steelframing-vs-alvenaria/mao-de-obra/index.html"
+    },
+    {
+      "source": "/steel-framing-x-alvenaria/mao-de-obra/",
+      "destination": "/content/steelframing-vs-alvenaria/mao-de-obra/index.html"
+    },
+    {
+      "source": "/steel-framing-x-alvenaria/prazo",
+      "destination": "/content/steelframing-vs-alvenaria/prazo/index.html"
+    },
+    {
+      "source": "/steel-framing-x-alvenaria/prazo/",
+      "destination": "/content/steelframing-vs-alvenaria/prazo/index.html"
+    },
+    {
+      "source": "/steel-framing-x-alvenaria/:path*",
+      "destination": "/content/steelframing-vs-alvenaria/:path*"
+    },
+    {
+      "source": "/mercado-de-investimento/airbnb-e-aluguel",
+      "destination": "/content/mercado-de-investimento/airbnb/index.html"
+    },
+    {
+      "source": "/mercado-de-investimento/airbnb-e-aluguel/",
+      "destination": "/content/mercado-de-investimento/airbnb/index.html"
+    },
+    {
+      "source": "/mercado-de-investimento/airbnb-e-aluguel/prazo-e-escala",
+      "destination": "/content/mercado-de-investimento/airbnb/prazo-e-escala/index.html"
+    },
+    {
+      "source": "/mercado-de-investimento/airbnb-e-aluguel/prazo-e-escala/",
+      "destination": "/content/mercado-de-investimento/airbnb/prazo-e-escala/index.html"
+    },
+    {
+      "source": "/mercado-de-investimento/airbnb-e-aluguel/produto-e-conforto",
+      "destination": "/content/mercado-de-investimento/airbnb/produto-e-conforto/index.html"
+    },
+    {
+      "source": "/mercado-de-investimento/airbnb-e-aluguel/produto-e-conforto/",
+      "destination": "/content/mercado-de-investimento/airbnb/produto-e-conforto/index.html"
+    },
+    {
+      "source": "/mercado-de-investimento/airbnb-e-aluguel/operacao-e-manutencao",
+      "destination": "/content/mercado-de-investimento/airbnb/operacao-e-manutencao/index.html"
+    },
+    {
+      "source": "/mercado-de-investimento/airbnb-e-aluguel/operacao-e-manutencao/",
+      "destination": "/content/mercado-de-investimento/airbnb/operacao-e-manutencao/index.html"
+    },
+    {
+      "source": "/mercado-de-investimento/airbnb-e-aluguel/viabilidade-economica",
+      "destination": "/content/mercado-de-investimento/airbnb/viabilidade-economica/index.html"
+    },
+    {
+      "source": "/mercado-de-investimento/airbnb-e-aluguel/viabilidade-economica/",
+      "destination": "/content/mercado-de-investimento/airbnb/viabilidade-economica/index.html"
+    },
+    {
+      "source": "/mercado-de-investimento/airbnb-e-aluguel/:path*",
+      "destination": "/content/mercado-de-investimento/airbnb/:path*"
+    },
+    {
+      "source": "/mercado-de-investimento/financiamento-steel-framing",
+      "destination": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/index.html"
+    },
+    {
+      "source": "/mercado-de-investimento/financiamento-steel-framing/",
+      "destination": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/index.html"
+    },
+    {
+      "source": "/mercado-de-investimento/financiamento-steel-framing/avaliacao-bancaria",
+      "destination": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/avaliacao-bancaria/index.html"
+    },
+    {
+      "source": "/mercado-de-investimento/financiamento-steel-framing/avaliacao-bancaria/",
+      "destination": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/avaliacao-bancaria/index.html"
+    },
+    {
+      "source": "/mercado-de-investimento/financiamento-steel-framing/caixa",
+      "destination": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/caixa/index.html"
+    },
+    {
+      "source": "/mercado-de-investimento/financiamento-steel-framing/caixa/",
+      "destination": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/caixa/index.html"
+    },
+    {
+      "source": "/mercado-de-investimento/financiamento-steel-framing/capital-proprio-ou-financiamento",
+      "destination": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/capital-proprio-ou-financiamento/index.html"
+    },
+    {
+      "source": "/mercado-de-investimento/financiamento-steel-framing/capital-proprio-ou-financiamento/",
+      "destination": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/capital-proprio-ou-financiamento/index.html"
+    },
+    {
+      "source": "/mercado-de-investimento/financiamento-steel-framing/:path*",
+      "destination": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/:path*"
+    }
   ]
 }
