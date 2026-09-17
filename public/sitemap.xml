@@ -28,4 +28,10 @@
   <url><loc>https://steelframing.com.br/steel-framing/aguenta-vento-forte/</loc><lastmod>2026-09-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://steelframing.com.br/steel-framing/esquenta/</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://steelframing.com.br/sobre/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url>
+    <loc>https://steelframing.com.br/steel-framing/isolamento-acustico/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

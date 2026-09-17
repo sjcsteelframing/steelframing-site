@@ -311,8 +311,24 @@
       "destination": "/content/steel-framing/esquenta/index.html"
     },
     {
+      "source": "/steel-framing/isolamento-acustico",
+      "destination": "/content/steel-framing/isolamento-acustico/index.html"
+    },
+    {
+      "source": "/steel-framing/isolamento-acustico/",
+      "destination": "/content/steel-framing/isolamento-acustico/index.html"
+    },
+    {
       "source": "/steel-framing/esquenta/",
       "destination": "/content/steel-framing/esquenta/index.html"
+    },
+    {
+      "source": "/steel-framing/isolamento-acustico",
+      "destination": "/content/steel-framing/isolamento-acustico/index.html"
+    },
+    {
+      "source": "/steel-framing/isolamento-acustico/",
+      "destination": "/content/steel-framing/isolamento-acustico/index.html"
     },
     {
       "source": "/steel-framing/o-que-e-light-steel-framing/:path*",
