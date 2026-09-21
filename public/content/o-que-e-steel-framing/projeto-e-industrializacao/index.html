@@ -180,6 +180,24 @@
 <p>Maior detalhamento e padronização podem reduzir variações e retrabalho em determinadas condições. Porém, se fornecimento, projeto ou montagem forem instáveis, o sistema pode perder justamente a previsibilidade que se esperava obter.</p>
 </div>
 </section>
+<section class="section section-soft">
+<div class="content-narrow">
+<div class="eyebrow">Para aprofundar</div>
+<h2>BIM, Steel Frame e o fim do improviso nas obras</h2>
+<p>Neste episódio do Fala Frame, Ary Onofre (ConstruÁgil) discute como o BIM transforma o planejamento de obras em Light Steel Framing — eliminando improvisações, reduzindo conflitos de projeto e tornando a execução mais previsível.</p>
+<div data-ff-vid="c1WqPK0Cb-Y" style="position:relative;padding-top:56.25%;background:#0b1e2e;border-radius:10px;overflow:hidden;cursor:pointer;margin:24px 0">
+  <img src="https://img.youtube.com/vi/c1WqPK0Cb-Y/hqdefault.jpg" alt="BIM, Steel Frame e o fim do improviso nas obras — Fala Frame #05" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.85">
+  <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">
+    <div style="width:64px;height:64px;background:rgba(12,30,48,.82);border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid rgba(255,255,255,.5)">
+      <div style="width:0;height:0;border-top:13px solid transparent;border-bottom:13px solid transparent;border-left:22px solid white;margin-left:5px"></div>
+    </div>
+  </div>
+  <div style="position:absolute;top:10px;left:10px;background:rgba(12,30,48,.85);color:#c99a3d;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:4px 9px;border-radius:4px">Fala Frame #05</div>
+</div>
+<p style="font-size:13px;color:#63707b;margin-top:-8px">Ary Onofre · ConstruÁgil · 1h58min · <a href="/fala-frame/" style="color:#173d5f">Todos os episódios →</a></p>
+<p style="font-size:13px;color:#8fa0b0;border-left:3px solid #dce3e8;padding-left:12px;margin-top:14px">Conteúdo produzido de forma independente pelo Fala Frame e disponibilizado aqui como material complementar. Opiniões e dados são dos entrevistados.</p>
+</div>
+</section>
 <section class="section">
 <div class="cta-panel">
 <div>
@@ -318,6 +336,30 @@
         }
       })
       .catch(function(){btn.disabled=false;btn.textContent='Assinar';});
+  });
+})();
+</script>
+
+<script>
+(function(){
+  document.querySelectorAll('[data-ff-vid]').forEach(function(el){
+    el.addEventListener('click', function(){
+      if(el.querySelector('iframe')) return;
+      var id = el.dataset.ffVid;
+      var img = el.querySelector('img');
+      var overlay = el.querySelector('div[style*="inset:0"]');
+      var badge = el.querySelector('div[style*="top:10px"]');
+      if(img) img.style.display='none';
+      if(overlay) overlay.style.display='none';
+      if(badge) badge.style.display='none';
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
+      iframe.title = (img ? img.alt : 'Fala Frame');
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      iframe.allowFullscreen = true;
+      iframe.style = 'position:absolute;inset:0;width:100%;height:100%;border:0';
+      el.appendChild(iframe);
+    });
   });
 })();
 </script>

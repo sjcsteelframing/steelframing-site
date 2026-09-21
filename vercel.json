@@ -203,6 +203,14 @@
   ],
   "rewrites": [
     {
+      "source": "/fala-frame",
+      "destination": "/content/fala-frame/index.html"
+    },
+    {
+      "source": "/fala-frame/",
+      "destination": "/content/fala-frame/index.html"
+    },
+    {
       "source": "/duvidas",
       "destination": "/content/duvidas/index.html"
     },
