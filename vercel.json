@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/fala-frame/",
+      "destination": "/fala-frame",
+      "permanent": true
+    },
+    {
       "source": "/content/duvidas",
       "destination": "/duvidas/",
       "permanent": true
