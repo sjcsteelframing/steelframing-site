@@ -1,6 +1,17 @@
 {
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "steelframing.com.br"
+        }
+      ],
+      "destination": "https://www.steelframing.com.br/:path*",
+      "permanent": true
+    },
+    {
       "source": "/fala-frame/",
       "destination": "/fala-frame",
       "permanent": true
