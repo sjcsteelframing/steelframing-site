@@ -6,3 +6,6 @@ servidor_local.py
 Thumbs.db
 *.log
 node_modules/
+
+# Rascunhos de conteúdo (não publicar)
+rascunhos/

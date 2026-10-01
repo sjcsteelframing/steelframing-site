@@ -202,6 +202,16 @@
       "permanent": true
     },
     {
+      "source": "/content/steel-framing/telhado",
+      "destination": "/steel-framing/telhado/",
+      "permanent": true
+    },
+    {
+      "source": "/content/steel-framing/telhado/",
+      "destination": "/steel-framing/telhado/",
+      "permanent": true
+    },
+    {
       "source": "/steel-framing",
       "destination": "/steel-framing/o-que-e-light-steel-framing/",
       "permanent": true
@@ -331,6 +341,14 @@
       "destination": "/content/steel-framing/aguenta-vento-forte/index.html"
     },
     {
+      "source": "/steel-framing/telhado",
+      "destination": "/content/steel-framing/telhado/index.html"
+    },
+    {
+      "source": "/steel-framing/telhado/",
+      "destination": "/content/steel-framing/telhado/index.html"
+    },
+    {
       "source": "/steel-framing/esquenta",
       "destination": "/content/steel-framing/esquenta/index.html"
     },
@@ -385,6 +403,14 @@
     {
       "source": "/steel-framing-x-alvenaria/fundacoes/",
       "destination": "/content/steelframing-vs-alvenaria/fundacoes/index.html"
+    },
+    {
+      "source": "/steel-framing-x-alvenaria/telhado",
+      "destination": "/content/steelframing-vs-alvenaria/telhado/index.html"
+    },
+    {
+      "source": "/steel-framing-x-alvenaria/telhado/",
+      "destination": "/content/steelframing-vs-alvenaria/telhado/index.html"
     },
     {
       "source": "/steel-framing-x-alvenaria/mao-de-obra",

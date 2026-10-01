@@ -26,6 +26,8 @@ URL_MAP = {
     "content/mercado-de-investimento/financiamento-imovel-steel-framing/avaliacao-bancaria/index.html":          "/mercado-de-investimento/financiamento-steel-framing/avaliacao-bancaria/",
     "content/mercado-de-investimento/financiamento-imovel-steel-framing/caixa/index.html":                       "/mercado-de-investimento/financiamento-steel-framing/caixa/",
     "content/mercado-de-investimento/financiamento-imovel-steel-framing/capital-proprio-ou-financiamento/index.html": "/mercado-de-investimento/financiamento-steel-framing/capital-proprio-ou-financiamento/",
+    "content/steel-framing/telhado/index.html":                                                    "/steel-framing/telhado/",
+    "content/steelframing-vs-alvenaria/telhado/index.html":                                       "/steel-framing-x-alvenaria/telhado/",
     "content/sobre/index.html":                                                                    "/sobre/",
 }
 
