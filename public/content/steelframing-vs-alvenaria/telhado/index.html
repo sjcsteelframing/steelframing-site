@@ -77,7 +77,9 @@
   </script>
 <style id="mobile-hero-override">@media(max-width:768px){.hero{background-image:url("/images/steelframing-vs-alvenaria/Mobile_hero-steel-framing-vs-alvenaria-telhado.jpg")!important}}
 /* hero proporcional à imagem (1774x887) para as duas casas aparecerem inteiras */
-@media(min-width:821px){.hero{height:clamp(480px,50vw,950px);min-height:0}}</style>
+@media(min-width:821px){.hero{height:clamp(480px,50vw,950px);min-height:0}}
+/* corta pelo lado do céu (esquerda) para as duas casas não sumirem em telas intermediárias */
+.hero{background-position:right center}</style>
 </head>
 <body>
 <header class="site-header" id="topo">
