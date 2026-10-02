@@ -53,7 +53,26 @@
   </style>
 </head>
 <body>
-<header id="site-header"></header>
+<header class="site-header" id="topo">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="steelframing.com.br - página inicial">
+      <img class="brand-logo" src="/images/home/logo-steel-framing.png" alt="Steel Framing">
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Abrir menu</span>
+    </button>
+    <nav class="main-nav" id="menu-principal" aria-label="Navegação principal">
+      <a href="/">Home</a>
+      <a href="/steel-framing/o-que-e-light-steel-framing/">Steel Framing</a>
+      <a href="/mercado-de-investimento/airbnb-e-aluguel/">Mercado de Investimento</a>
+      <a href="/steel-framing-x-alvenaria/">Steel Framing vs Alvenaria</a>
+      <a href="/duvidas/">Dúvidas</a>
+      <a href="/sobre/">Sobre</a>
+      <a href="/contato/">Contato</a>
+    <form action="/busca/" method="get" class="nav-search-form" role="search"><input type="search" name="q" class="nav-search-input" placeholder="Buscar…" aria-label="Buscar no site" autocomplete="off" maxlength="100"><button type="submit" class="nav-search-btn" aria-label="Buscar"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button></form></nav>
+  </div>
+</header>
 
 <div class="hero-evento">
   <div class="wrap">
@@ -161,7 +180,50 @@
   </section>
 </main>
 
-<footer id="site-footer"></footer>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img class="footer-logo" src="/images/home/logo-steel-framing-fundo-escuro.png" alt="Steel Framing">
+      <p><strong style="color:#efc266">Nossa missão:</strong><br>Ampliar o acesso a conhecimento técnico confiável sobre Light Steel Framing e contribuir para a qualificação e o desenvolvimento do sistema no Brasil.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Navegação do rodapé">
+      <a href="/">Home</a>
+      <a href="/steel-framing/o-que-e-light-steel-framing/">Steel Framing</a>
+      <a href="/mercado-de-investimento/airbnb-e-aluguel/">Mercado de Investimento</a>
+      <a href="/steel-framing-x-alvenaria/">Steel Framing vs Alvenaria</a>
+      <a href="/duvidas/">Dúvidas</a>
+      <a href="/sobre/">Sobre</a>
+      <a href="/contato/">Contato</a>
+    </nav>
+    <div class="footer-meta">
+      <a class="social-link" href="https://www.instagram.com/steelframing/" rel="noopener" target="_blank">
+        <img src="/images/home/instagram-fundo-escuro.png" alt="" aria-hidden="true">
+        <span>@steelframing</span>
+      </a>
+      <a href="https://steelframing.com.br/">steelframing.com.br</a>
+    </div>
+    <div class="footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Novidades sobre Steel Framing direto no seu e-mail.</p>
+      <form action="/api/subscribe" method="POST" class="newsletter-form">
+        <input type="email" name="EMAIL" placeholder="seu@email.com" required autocomplete="email">
+        <input type="hidden" name="email_address_check" value="">
+        <input type="hidden" name="locale" value="pt">
+        <button type="submit">Assinar</button>
+      </form>
+      <p class="newsletter-lgpd">Sem spam. Cancele quando quiser.</p>
+      <div class="footer-agape">
+        <div class="agape-footer-badge"><img src="/images/Agape_logo.png" alt="Associação Ágape" class="agape-footer-logo"></div>
+        <p>Apoiamos a <a href="https://agape-sjc.org.br" target="_blank" rel="noopener">Associação Ágape</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p class="engineer-note">Consulte sempre um Engenheiro!</p>
+    <p class="faith-note">Deus é fiel</p>
+    <p class="copyright-note">© 2026 steelframing.com.br</p>
+  </div>
+</footer>
 <script src="/js/global.js"></script>
 </body>
 </html>
