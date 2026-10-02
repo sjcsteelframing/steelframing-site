@@ -330,6 +330,14 @@
       "destination": "/content/steel-framing/pega-fogo/index.html"
     },
     {
+      "source": "/steel-framing/preco-steel-framing",
+      "destination": "/content/steel-framing/preco-steel-framing/index.html"
+    },
+    {
+      "source": "/steel-framing/preco-steel-framing/",
+      "destination": "/content/steel-framing/preco-steel-framing/index.html"
+    },
+    {
       "source": "/steel-framing/quanto-tempo-dura",
       "destination": "/content/steel-framing/quanto-tempo-dura/index.html"
     },
