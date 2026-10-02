@@ -524,6 +524,14 @@
     {
       "source": "/mercado-de-investimento/financiamento-steel-framing/:path*",
       "destination": "/content/mercado-de-investimento/financiamento-imovel-steel-framing/:path*"
+    },
+    {
+      "source": "/eventos/construlev-expo-2026",
+      "destination": "/content/eventos/construlev-expo-2026/index.html"
+    },
+    {
+      "source": "/eventos/construlev-expo-2026/",
+      "destination": "/content/eventos/construlev-expo-2026/index.html"
     }
   ]
 }
