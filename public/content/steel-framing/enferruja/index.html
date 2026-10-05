@@ -252,6 +252,7 @@
 (function(){
   var pageUrl = (document.querySelector('link[rel="canonical"]')||{}).href || location.href;
   var pageTitle = document.title.split('|')[0].trim();
+  var pageDesc = (document.querySelector('meta[name="description"]')||{}).content || '';
   var svgCopy = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>';
   ['top','bot'].forEach(function(s){
     var ig = document.getElementById('sf-ig-'+s);
@@ -276,9 +277,9 @@
     });
     var wpp = document.getElementById('sf-wpp-'+s);
     if(!wpp) return;
-    wpp.href = 'https://wa.me/?text=' + encodeURIComponent(pageTitle + '\n\n' + pageUrl);
+    wpp.href = 'https://wa.me/?text=' + encodeURIComponent(pageUrl);
     document.getElementById('sf-li-'+s).href  = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(pageUrl);
-    document.getElementById('sf-x-'+s).href   = 'https://x.com/intent/tweet?text=' + encodeURIComponent(pageTitle) + '&url=' + encodeURIComponent(pageUrl);
+    document.getElementById('sf-x-'+s).href   = 'https://x.com/intent/tweet?text=' + encodeURIComponent(pageTitle + ' — ' + pageDesc.substring(0, 80)) + '&url=' + encodeURIComponent(pageUrl);
     document.getElementById('sf-cp-'+s).addEventListener('click', function(){
       var btn = this;
       var reset = function(){ btn.innerHTML = svgCopy + 'Copiar link'; };
