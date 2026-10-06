@@ -188,3 +188,11 @@
   .nav-search-input{width:100%;flex:1;font-size:1rem;padding:8px 8px 8px 14px}
   .nav-search-btn{padding:8px 12px 8px 4px}
 }
+
+/* =============================================
+   BANNER MESTRE STEEL FRAME (aside.toc)
+   ============================================= */
+.toc-banner-mestre{display:block;text-decoration:none;margin-top:20px;border-radius:8px;overflow:hidden;transition:opacity .2s}
+.toc-banner-mestre:hover{opacity:.9}
+.toc-banner-mestre img{width:100%;height:auto;display:block;border-radius:8px}
+.toc-banner-caption{display:block;margin-top:6px;font-size:.72rem;font-weight:600;color:var(--muted,#6b7a8d);letter-spacing:.03em;line-height:1.4}

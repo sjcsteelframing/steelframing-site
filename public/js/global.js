@@ -175,3 +175,19 @@
     if (img) { e.preventDefault(); openLbx(img.src, img.alt); }
   });
 })();
+
+// ── Banner Mestre Steel Frame (aside.toc) ─────────────────────────────────────
+(function () {
+  var aside = document.querySelector('aside.toc');
+  if (!aside) return;
+  // Só injeta se o banner ainda não existir (evita duplicatas)
+  if (aside.querySelector('.toc-banner-mestre')) return;
+  var a = document.createElement('a');
+  a.href = 'https://mestresteelframe.com.br/';
+  a.target = '_blank';
+  a.rel = 'noopener noreferrer';
+  a.className = 'toc-banner-mestre';
+  a.setAttribute('aria-label', 'Mestre Steel Frame — Formação presencial em Light Steel Framing, 19 a 23 de outubro, São José dos Campos');
+  a.innerHTML = '<img src="/images/banner-mestre-steel-frame-vertical.png" alt="Mestre Steel Frame — 31ª Turma, 19 a 23 de outubro, São José dos Campos/SP" loading="lazy" width="585" height="1756"><span class="toc-banner-caption">Patrícia Andrade · Formação presencial · Certificado MEC</span>';
+  aside.appendChild(a);
+})();
