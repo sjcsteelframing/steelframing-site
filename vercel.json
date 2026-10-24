@@ -258,6 +258,14 @@
       "destination": "/busca/index.html"
     },
     {
+      "source": "/notasc",
+      "destination": "/notasc/index.html"
+    },
+    {
+      "source": "/notasc/",
+      "destination": "/notasc/index.html"
+    },
+    {
       "source": "/contato",
       "destination": "/content/contato/index.html"
     },
