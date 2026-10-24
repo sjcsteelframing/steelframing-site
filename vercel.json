@@ -266,6 +266,62 @@
       "destination": "/notasc/index.html"
     },
     {
+      "source": "/notasc/chales",
+      "destination": "/notasc/chales/index.html"
+    },
+    {
+      "source": "/notasc/chales/",
+      "destination": "/notasc/chales/index.html"
+    },
+    {
+      "source": "/notasc/chales/beija-flor",
+      "destination": "/notasc/chales/beija-flor/index.html"
+    },
+    {
+      "source": "/notasc/chales/beija-flor/",
+      "destination": "/notasc/chales/beija-flor/index.html"
+    },
+    {
+      "source": "/notasc/servicos/administracao-de-obra",
+      "destination": "/notasc/servicos/administracao-de-obra/index.html"
+    },
+    {
+      "source": "/notasc/servicos/administracao-de-obra/",
+      "destination": "/notasc/servicos/administracao-de-obra/index.html"
+    },
+    {
+      "source": "/notasc/investimento",
+      "destination": "/notasc/investimento/index.html"
+    },
+    {
+      "source": "/notasc/investimento/",
+      "destination": "/notasc/investimento/index.html"
+    },
+    {
+      "source": "/notasc/como-funciona",
+      "destination": "/notasc/como-funciona/index.html"
+    },
+    {
+      "source": "/notasc/como-funciona/",
+      "destination": "/notasc/como-funciona/index.html"
+    },
+    {
+      "source": "/notasc/sobre",
+      "destination": "/notasc/sobre/index.html"
+    },
+    {
+      "source": "/notasc/sobre/",
+      "destination": "/notasc/sobre/index.html"
+    },
+    {
+      "source": "/notasc/contato",
+      "destination": "/notasc/contato/index.html"
+    },
+    {
+      "source": "/notasc/contato/",
+      "destination": "/notasc/contato/index.html"
+    },
+    {
       "source": "/contato",
       "destination": "/content/contato/index.html"
     },
