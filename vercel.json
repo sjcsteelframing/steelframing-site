@@ -242,6 +242,14 @@
       "destination": "/content/en/index.html"
     },
     {
+      "source": "/en/steel-framing/o-que-e-light-steel-framing",
+      "destination": "/content/en/steel-framing/o-que-e-light-steel-framing/index.html"
+    },
+    {
+      "source": "/en/steel-framing/o-que-e-light-steel-framing/",
+      "destination": "/content/en/steel-framing/o-que-e-light-steel-framing/index.html"
+    },
+    {
       "source": "/fala-frame",
       "destination": "/content/fala-frame/index.html"
     },
