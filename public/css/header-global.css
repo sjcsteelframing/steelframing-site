@@ -206,3 +206,13 @@
 @media (max-width: 860px) {
   .lang-switch { margin-left: 0; margin-top: 4px; }
 }
+
+/* Impressão / salvar como PDF (26/10/2026): seções com animação de entrada
+   saem visíveis, fundos e degradês imprimem como na tela (textos claros
+   continuam legíveis) e os elementos flutuantes não aparecem. */
+@media print {
+  .reveal, .reveal.visible { opacity: 1 !important; transform: none !important; transition: none !important; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .site-header { position: static !important; box-shadow: none !important; }
+  .fab-group, .sf-share, .lbx-overlay, .footer-newsletter, .nav-search-form { display: none !important; }
+}
