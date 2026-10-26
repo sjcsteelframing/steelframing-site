@@ -157,16 +157,6 @@
       "permanent": true
     },
     {
-      "source": "/mercado-de-investimento",
-      "destination": "/mercado-de-investimento/airbnb-e-aluguel/",
-      "permanent": true
-    },
-    {
-      "source": "/mercado-de-investimento/",
-      "destination": "/mercado-de-investimento/airbnb-e-aluguel/",
-      "permanent": true
-    },
-    {
       "source": "/content/steel-framing/enferruja",
       "destination": "/steel-framing/enferruja/",
       "permanent": true
@@ -548,6 +538,54 @@
     {
       "source": "/steel-framing-x-alvenaria/:path*",
       "destination": "/content/steelframing-vs-alvenaria/:path*"
+    },
+    {
+      "source": "/mercado-de-investimento",
+      "destination": "/content/mercado-de-investimento/index.html"
+    },
+    {
+      "source": "/mercado-de-investimento/",
+      "destination": "/content/mercado-de-investimento/index.html"
+    },
+    {
+      "source": "/mercado-de-investimento/kitnets",
+      "destination": "/content/mercado-de-investimento/kitnets/index.html"
+    },
+    {
+      "source": "/mercado-de-investimento/kitnets/",
+      "destination": "/content/mercado-de-investimento/kitnets/index.html"
+    },
+    {
+      "source": "/mercado-de-investimento/kitnets/pensionato",
+      "destination": "/content/mercado-de-investimento/kitnets/pensionato/index.html"
+    },
+    {
+      "source": "/mercado-de-investimento/kitnets/pensionato/",
+      "destination": "/content/mercado-de-investimento/kitnets/pensionato/index.html"
+    },
+    {
+      "source": "/en/mercado-de-investimento",
+      "destination": "/content/en/mercado-de-investimento/index.html"
+    },
+    {
+      "source": "/en/mercado-de-investimento/",
+      "destination": "/content/en/mercado-de-investimento/index.html"
+    },
+    {
+      "source": "/en/mercado-de-investimento/kitnets",
+      "destination": "/content/en/mercado-de-investimento/kitnets/index.html"
+    },
+    {
+      "source": "/en/mercado-de-investimento/kitnets/",
+      "destination": "/content/en/mercado-de-investimento/kitnets/index.html"
+    },
+    {
+      "source": "/en/mercado-de-investimento/kitnets/boarding-house",
+      "destination": "/content/en/mercado-de-investimento/kitnets/boarding-house/index.html"
+    },
+    {
+      "source": "/en/mercado-de-investimento/kitnets/boarding-house/",
+      "destination": "/content/en/mercado-de-investimento/kitnets/boarding-house/index.html"
     },
     {
       "source": "/mercado-de-investimento/airbnb-e-aluguel",
