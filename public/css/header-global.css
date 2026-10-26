@@ -198,28 +198,10 @@
 .toc-banner-caption{display:block;margin-top:6px;font-size:.72rem;font-weight:600;color:var(--muted,#6b7a8d);letter-spacing:.03em;line-height:1.4}
 
 /* ── Language switch (PT | EN) ──────────────────────────────────────────── */
-.lang-switch {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  margin-left: 8px;
-  font-size: .8rem;
-  font-weight: 700;
-  letter-spacing: .04em;
-}
-.lang-btn {
-  color: var(--muted, #6b7e8c);
-  text-decoration: none;
-  padding: 2px 4px;
-  border-radius: 3px;
-  transition: color .15s;
-}
-.lang-btn:hover { color: var(--navy, #1a2e3d); }
-.lang-current {
-  color: var(--navy, #1a2e3d);
-  cursor: default;
-}
-.lang-sep { color: var(--muted, #6b7e8c); }
+.lang-switch { display: inline-flex; align-items: center; gap: 6px; margin-left: 8px; }
+.lang-flag { font-size: 1.25rem; line-height: 1; text-decoration: none; opacity: .45; transition: opacity .15s; cursor: pointer; border: none; background: none; padding: 0; }
+.lang-flag:hover { opacity: .75; }
+.lang-flag-current { opacity: 1; cursor: default; pointer-events: none; }
 @media (max-width: 860px) {
   .lang-switch { margin-left: 0; margin-top: 4px; }
 }
