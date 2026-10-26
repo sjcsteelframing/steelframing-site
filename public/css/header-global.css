@@ -199,8 +199,9 @@
 
 /* ── Language switch (PT | EN) ──────────────────────────────────────────── */
 .lang-switch { display: inline-flex; align-items: center; gap: 6px; margin-left: 8px; }
-.lang-flag { font-size: 1.25rem; line-height: 1; text-decoration: none; opacity: .45; transition: opacity .15s; cursor: pointer; border: none; background: none; padding: 0; }
-.lang-flag:hover { opacity: .75; }
+.lang-flag { display: inline-flex; text-decoration: none; opacity: .4; transition: opacity .15s; cursor: pointer; border: none; background: none; padding: 0; }
+.lang-flag img { display: block; width: 22px; height: 15px; border-radius: 2px; object-fit: cover; }
+.lang-flag:hover { opacity: .7; }
 .lang-flag-current { opacity: 1; cursor: default; pointer-events: none; }
 @media (max-width: 860px) {
   .lang-switch { margin-left: 0; margin-top: 4px; }
