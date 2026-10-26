@@ -250,6 +250,30 @@
       "destination": "/content/en/steel-framing/o-que-e-light-steel-framing/index.html"
     },
     {
+      "source": "/en/steel-framing/how-it-works",
+      "destination": "/content/en/steel-framing/how-it-works/index.html"
+    },
+    {
+      "source": "/en/steel-framing/how-it-works/",
+      "destination": "/content/en/steel-framing/how-it-works/index.html"
+    },
+    {
+      "source": "/en/steel-framing/design-and-industrialization",
+      "destination": "/content/en/steel-framing/design-and-industrialization/index.html"
+    },
+    {
+      "source": "/en/steel-framing/design-and-industrialization/",
+      "destination": "/content/en/steel-framing/design-and-industrialization/index.html"
+    },
+    {
+      "source": "/en/steel-framing/performance-and-durability",
+      "destination": "/content/en/steel-framing/performance-and-durability/index.html"
+    },
+    {
+      "source": "/en/steel-framing/performance-and-durability/",
+      "destination": "/content/en/steel-framing/performance-and-durability/index.html"
+    },
+    {
       "source": "/fala-frame",
       "destination": "/content/fala-frame/index.html"
     },
