@@ -636,6 +636,38 @@
     {
       "source": "/eventos/construlev-expo-2026/",
       "destination": "/content/eventos/construlev-expo-2026/index.html"
+    },
+    {
+      "source": "/en/mercado-de-investimento/airbnb-e-aluguel",
+      "destination": "/content/en/mercado-de-investimento/airbnb-e-aluguel/index.html"
+    },
+    {
+      "source": "/en/mercado-de-investimento/airbnb-e-aluguel/",
+      "destination": "/content/en/mercado-de-investimento/airbnb-e-aluguel/index.html"
+    },
+    {
+      "source": "/en/steel-framing-x-alvenaria",
+      "destination": "/content/en/steel-framing-x-alvenaria/index.html"
+    },
+    {
+      "source": "/en/steel-framing-x-alvenaria/",
+      "destination": "/content/en/steel-framing-x-alvenaria/index.html"
+    },
+    {
+      "source": "/en/mercado-de-investimento/financiamento-steel-framing",
+      "destination": "/content/en/mercado-de-investimento/financiamento-steel-framing/index.html"
+    },
+    {
+      "source": "/en/mercado-de-investimento/financiamento-steel-framing/",
+      "destination": "/content/en/mercado-de-investimento/financiamento-steel-framing/index.html"
+    },
+    {
+      "source": "/en/duvidas",
+      "destination": "/content/en/duvidas/index.html"
+    },
+    {
+      "source": "/en/duvidas/",
+      "destination": "/content/en/duvidas/index.html"
     }
   ]
 }
