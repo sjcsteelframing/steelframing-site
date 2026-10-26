@@ -706,6 +706,86 @@
     {
       "source": "/en/duvidas/",
       "destination": "/content/en/duvidas/index.html"
+    },
+    {
+      "source": "/en/steel-framing-x-alvenaria/cost",
+      "destination": "/content/en/steel-framing-x-alvenaria/cost/index.html"
+    },
+    {
+      "source": "/en/steel-framing-x-alvenaria/cost/",
+      "destination": "/content/en/steel-framing-x-alvenaria/cost/index.html"
+    },
+    {
+      "source": "/en/steel-framing-x-alvenaria/schedule",
+      "destination": "/content/en/steel-framing-x-alvenaria/schedule/index.html"
+    },
+    {
+      "source": "/en/steel-framing-x-alvenaria/schedule/",
+      "destination": "/content/en/steel-framing-x-alvenaria/schedule/index.html"
+    },
+    {
+      "source": "/en/steel-framing-x-alvenaria/labor",
+      "destination": "/content/en/steel-framing-x-alvenaria/labor/index.html"
+    },
+    {
+      "source": "/en/steel-framing-x-alvenaria/labor/",
+      "destination": "/content/en/steel-framing-x-alvenaria/labor/index.html"
+    },
+    {
+      "source": "/en/steel-framing-x-alvenaria/performance",
+      "destination": "/content/en/steel-framing-x-alvenaria/performance/index.html"
+    },
+    {
+      "source": "/en/steel-framing-x-alvenaria/performance/",
+      "destination": "/content/en/steel-framing-x-alvenaria/performance/index.html"
+    },
+    {
+      "source": "/en/steel-framing-x-alvenaria/foundations",
+      "destination": "/content/en/steel-framing-x-alvenaria/foundations/index.html"
+    },
+    {
+      "source": "/en/steel-framing-x-alvenaria/foundations/",
+      "destination": "/content/en/steel-framing-x-alvenaria/foundations/index.html"
+    },
+    {
+      "source": "/en/steel-framing-x-alvenaria/roof",
+      "destination": "/content/en/steel-framing-x-alvenaria/roof/index.html"
+    },
+    {
+      "source": "/en/steel-framing-x-alvenaria/roof/",
+      "destination": "/content/en/steel-framing-x-alvenaria/roof/index.html"
+    },
+    {
+      "source": "/en/mercado-de-investimento/airbnb-e-aluguel/schedule-and-scale",
+      "destination": "/content/en/mercado-de-investimento/airbnb-e-aluguel/schedule-and-scale/index.html"
+    },
+    {
+      "source": "/en/mercado-de-investimento/airbnb-e-aluguel/schedule-and-scale/",
+      "destination": "/content/en/mercado-de-investimento/airbnb-e-aluguel/schedule-and-scale/index.html"
+    },
+    {
+      "source": "/en/mercado-de-investimento/airbnb-e-aluguel/product-and-comfort",
+      "destination": "/content/en/mercado-de-investimento/airbnb-e-aluguel/product-and-comfort/index.html"
+    },
+    {
+      "source": "/en/mercado-de-investimento/airbnb-e-aluguel/product-and-comfort/",
+      "destination": "/content/en/mercado-de-investimento/airbnb-e-aluguel/product-and-comfort/index.html"
+    },
+    {
+      "source": "/en/mercado-de-investimento/airbnb-e-aluguel/operations-and-maintenance",
+      "destination": "/content/en/mercado-de-investimento/airbnb-e-aluguel/operations-and-maintenance/index.html"
+    },
+    {
+      "source": "/en/mercado-de-investimento/airbnb-e-aluguel/operations-and-maintenance/",
+      "destination": "/content/en/mercado-de-investimento/airbnb-e-aluguel/operations-and-maintenance/index.html"
+    },
+    {
+      "source": "/en/mercado-de-investimento/airbnb-e-aluguel/economic-feasibility",
+      "destination": "/content/en/mercado-de-investimento/airbnb-e-aluguel/economic-feasibility/index.html"
+    },
+    {
+      "source": "/en/mercado-de-investimento/airbnb-e-aluguel/economic-feasibility/",
+      "destination": "/content/en/mercado-de-investimento/airbnb-e-aluguel/economic-feasibility/index.html"
     }
   ]
 }
