@@ -196,3 +196,30 @@
 .toc-banner-mestre:hover{opacity:.9}
 .toc-banner-mestre img{width:100%;height:auto;display:block;border-radius:8px}
 .toc-banner-caption{display:block;margin-top:6px;font-size:.72rem;font-weight:600;color:var(--muted,#6b7a8d);letter-spacing:.03em;line-height:1.4}
+
+/* ── Language switch (PT | EN) ──────────────────────────────────────────── */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 8px;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+.lang-btn {
+  color: var(--muted, #6b7e8c);
+  text-decoration: none;
+  padding: 2px 4px;
+  border-radius: 3px;
+  transition: color .15s;
+}
+.lang-btn:hover { color: var(--navy, #1a2e3d); }
+.lang-current {
+  color: var(--navy, #1a2e3d);
+  cursor: default;
+}
+.lang-sep { color: var(--muted, #6b7e8c); }
+@media (max-width: 860px) {
+  .lang-switch { margin-left: 0; margin-top: 4px; }
+}

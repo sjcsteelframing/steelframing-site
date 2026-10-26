@@ -234,6 +234,14 @@
   ],
   "rewrites": [
     {
+      "source": "/en",
+      "destination": "/content/en/index.html"
+    },
+    {
+      "source": "/en/",
+      "destination": "/content/en/index.html"
+    },
+    {
       "source": "/fala-frame",
       "destination": "/content/fala-frame/index.html"
     },

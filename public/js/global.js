@@ -175,3 +175,27 @@
     if (img) { e.preventDefault(); openLbx(img.src, img.alt); }
   });
 })();
+
+// ── Language auto-detection ───────────────────────────────────────────────────
+// Redirects non-Portuguese visitors to /en/ on first visit (PT pages only).
+// Saves choice to localStorage so manual toggle is respected afterwards.
+(function () {
+  // Only run on Portuguese pages (not already on /en/)
+  if (window.location.pathname.indexOf('/en') === 0) return;
+
+  try {
+    // If user already chose a language, respect it
+    var saved = localStorage.getItem('sf_lang_choice');
+    if (saved) return;
+
+    // Detect browser language
+    var lang = (navigator.language || navigator.userLanguage || 'pt').toLowerCase();
+    var isPt = lang === 'pt' || lang.indexOf('pt-') === 0;
+
+    if (!isPt) {
+      // Mark choice so we don't redirect again
+      localStorage.setItem('sf_lang_choice', 'en');
+      window.location.replace('/en/');
+    }
+  } catch (e) {}
+})();
