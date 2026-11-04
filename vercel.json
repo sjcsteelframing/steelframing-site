@@ -564,6 +564,14 @@
       "destination": "/content/mercado-de-investimento/kitnets/pensionato/index.html"
     },
     {
+      "source": "/mercado-de-investimento/kitnets/pessoa-fisica-ou-juridica",
+      "destination": "/content/mercado-de-investimento/kitnets/pessoa-fisica-ou-juridica/index.html"
+    },
+    {
+      "source": "/mercado-de-investimento/kitnets/pessoa-fisica-ou-juridica/",
+      "destination": "/content/mercado-de-investimento/kitnets/pessoa-fisica-ou-juridica/index.html"
+    },
+    {
       "source": "/en/mercado-de-investimento",
       "destination": "/content/en/mercado-de-investimento/index.html"
     },
@@ -586,6 +594,14 @@
     {
       "source": "/en/mercado-de-investimento/kitnets/boarding-house/",
       "destination": "/content/en/mercado-de-investimento/kitnets/boarding-house/index.html"
+    },
+    {
+      "source": "/en/mercado-de-investimento/kitnets/individual-or-company",
+      "destination": "/content/en/mercado-de-investimento/kitnets/individual-or-company/index.html"
+    },
+    {
+      "source": "/en/mercado-de-investimento/kitnets/individual-or-company/",
+      "destination": "/content/en/mercado-de-investimento/kitnets/individual-or-company/index.html"
     },
     {
       "source": "/mercado-de-investimento/airbnb-e-aluguel",
